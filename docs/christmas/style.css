@@ -1,47 +1,47 @@
 .christmas {position: relative/* fixed ie7 bug */; height: 1000px; overflow: hidden;}
-.christmas > .stage1 {position: relative; overflow: hidden; height: 100%; background: url(images/pageimg/special/christmas2015/stage1bg.jpg) center top no-repeat;}
-.stage1 > .reindeer {z-index: 1; position: absolute; bottom: 36px; left: 50%; margin-left: -520px; width: 326px; height: 410px; background: url(images/pageimg/special/christmas2015/reindeer.png) no-repeat;}
-.stage1 > .reindeer > .reindeer-eye {position: absolute; top: 82px; left: 25px; width: 192px; height: 116px; background: url(images/pageimg/special/christmas2015/eye.gif) no-repeat;}
-.stage1 > .reindeer > .reindeer-nose {position: absolute; top: 136px; right: 40px; width: 72px; height: 50px; background: url(images/pageimg/special/christmas2015/nose.gif) no-repeat;}
-.stage1 > .santa-claus {z-index: 2; position: absolute; bottom: 65px; left: 50%; margin-left: 70px; width: 574px; height: 710px; background: url(images/pageimg/special/christmas2015/santa_claus.png) no-repeat;}
+.christmas > .stage1 {position: relative; overflow: hidden; height: 100%; background: url(images/stage1bg.jpg) center top no-repeat;}
+.stage1 > .reindeer {z-index: 1; position: absolute; bottom: 36px; left: 50%; margin-left: -520px; width: 326px; height: 410px; background: url(images/reindeer.png) no-repeat;}
+.stage1 > .reindeer > .reindeer-eye {position: absolute; top: 82px; left: 25px; width: 192px; height: 116px; background: url(images/eye.gif) no-repeat;}
+.stage1 > .reindeer > .reindeer-nose {position: absolute; top: 136px; right: 40px; width: 72px; height: 50px; background: url(images/nose.gif) no-repeat;}
+.stage1 > .santa-claus {z-index: 2; position: absolute; bottom: 65px; left: 50%; margin-left: 70px; width: 574px; height: 710px; background: url(images/santa_claus.png) no-repeat;}
 
-.stage1 > .content-wrap {margin: 0 auto; margin-top: 30px; width: 1016px; height: 674px; background: url(images/pageimg/special/christmas2015/moon.png) 106px 0 no-repeat; overflow: hidden;}
+.stage1 > .content-wrap {margin: 0 auto; margin-top: 30px; width: 1016px; height: 674px; background: url(images/moon.png) 106px 0 no-repeat; overflow: hidden;}
 .stage1 > .content-wrap > .text {margin-top: 88px; width: 1016px; height: 448px; background-repeat: no-repeat;}
 .stage1 > .get-it {position: absolute; bottom: 234px; left: 50%; margin-left: -148px; width: 250px; height: 225px; background-repeat: no-repeat; cursor: pointer;}
-.stage1 > .get-it > .arrow {display: inline-block; margin-left: 168px; margin-top: 114px; width: 53px; height: 58px; background: url(images/pageimg/special/christmas2015/arrow.png) no-repeat;}
-.stage1 > .box1 {position:absolute; bottom: 11px; left: 50%; width: 117px; height: 138px; margin-left: -579px; background: url(images/pageimg/special/christmas2015/box1.png) no-repeat;}
-.stage1 > .box2 {position:absolute; bottom: 17px; left: 50%; width: 156px; height: 143px; margin-left: 445px; background: url(images/pageimg/special/christmas2015/box2.png) no-repeat;}
-.stage1 > .box3 {position:absolute; bottom: 34px; left: 50%; width: 115px; height: 109px; margin-left: 626px; background: url(images/pageimg/special/christmas2015/box3.png) no-repeat;}
+.stage1 > .get-it > .arrow {display: inline-block; margin-left: 168px; margin-top: 114px; width: 53px; height: 58px; background: url(images/arrow.png) no-repeat;}
+.stage1 > .box1 {position:absolute; bottom: 11px; left: 50%; width: 117px; height: 138px; margin-left: -579px; background: url(images/box1.png) no-repeat;}
+.stage1 > .box2 {position:absolute; bottom: 17px; left: 50%; width: 156px; height: 143px; margin-left: 445px; background: url(images/box2.png) no-repeat;}
+.stage1 > .box3 {position:absolute; bottom: 34px; left: 50%; width: 115px; height: 109px; margin-left: 626px; background: url(images/box3.png) no-repeat;}
 
 /* 多语言 */
-.lag-en .christmas > .stage1 .text {background-image: url(images/pageimg/special/christmas2015/en/text.png)}
-.lag-fr .christmas > .stage1 .text {background-image: url(images/pageimg/special/christmas2015/fr/text.png)}
-.lag-es .christmas > .stage1 .text {background-image: url(images/pageimg/special/christmas2015/es/text.png)}
-.lag-ru .christmas > .stage1 .text {background-image: url(images/pageimg/special/christmas2015/ru/text.png)}
-.lag-pt .christmas > .stage1 .text {background-image: url(images/pageimg/special/christmas2015/pt/text.png)}
+.lag-en .christmas > .stage1 .text {background-image: url(images/en/text.png)}
+.lag-fr .christmas > .stage1 .text {background-image: url(images/fr/text.png)}
+.lag-es .christmas > .stage1 .text {background-image: url(images/es/text.png)}
+.lag-ru .christmas > .stage1 .text {background-image: url(images/ru/text.png)}
+.lag-pt .christmas > .stage1 .text {background-image: url(images/pt/text.png)}
 
-.lag-en .christmas > .stage1 > .get-it {background-image: url(images/pageimg/special/christmas2015/en/getit.png)}
-.lag-fr .christmas > .stage1 > .get-it {background-image: url(images/pageimg/special/christmas2015/fr/getit.png)}
-.lag-es .christmas > .stage1 > .get-it {background-image: url(images/pageimg/special/christmas2015/es/getit.png)}
-.lag-ru .christmas > .stage1 > .get-it {background-image: url(images/pageimg/special/christmas2015/ru/getit.png)}
-.lag-pt .christmas > .stage1 > .get-it {background-image: url(images/pageimg/special/christmas2015/pt/getit.png)}
+.lag-en .christmas > .stage1 > .get-it {background-image: url(images/en/getit.png)}
+.lag-fr .christmas > .stage1 > .get-it {background-image: url(images/fr/getit.png)}
+.lag-es .christmas > .stage1 > .get-it {background-image: url(images/es/getit.png)}
+.lag-ru .christmas > .stage1 > .get-it {background-image: url(images/ru/getit.png)}
+.lag-pt .christmas > .stage1 > .get-it {background-image: url(images/pt/getit.png)}
 
 
 
-.christmas > .stage2 {position: relative; overflow: hidden; height: 100%; background: url(images/pageimg/special/christmas2015/stage2bg.jpg) center top no-repeat;}
-.stage2 > .oven {position: relative; margin: 0 auto; margin-top: 490px; width: 720px; height: 388px; background: url(images/pageimg/special/christmas2015/oven_top.png) no-repeat;}
-.stage2 > .oven > .fire {position: absolute; left: 282px; top: 200px; width: 140px; height: 153px; background: url(images/pageimg/special/christmas2015/fire.png) no-repeat;}
-.stage2 > .oven > .sock1 {position: absolute; left: 152px; top: 32px; width: 70px; height: 115px; background: url(images/pageimg/special/christmas2015/sock1.png) no-repeat;}
-.stage2 > .oven > .sock2 {position: absolute; right: 110px; top: 50px; width: 49px; height: 102px; background: url(images/pageimg/special/christmas2015/sock2.png) no-repeat;}
-.stage2 > .oven > .over-bottom {position: absolute; bottom: 0; left: 0; width: 100%; height: 65px; background: url(images/pageimg/special/christmas2015/oven_bottom.png) no-repeat;}
+.christmas > .stage2 {position: relative; overflow: hidden; height: 100%; background: url(images/stage2bg.jpg) center top no-repeat;}
+.stage2 > .oven {position: relative; margin: 0 auto; margin-top: 490px; width: 720px; height: 388px; background: url(images/oven_top.png) no-repeat;}
+.stage2 > .oven > .fire {position: absolute; left: 282px; top: 200px; width: 140px; height: 153px; background: url(images/fire.png) no-repeat;}
+.stage2 > .oven > .sock1 {position: absolute; left: 152px; top: 32px; width: 70px; height: 115px; background: url(images/sock1.png) no-repeat;}
+.stage2 > .oven > .sock2 {position: absolute; right: 110px; top: 50px; width: 49px; height: 102px; background: url(images/sock2.png) no-repeat;}
+.stage2 > .oven > .over-bottom {position: absolute; bottom: 0; left: 0; width: 100%; height: 65px; background: url(images/oven_bottom.png) no-repeat;}
 
-.stage2 > .coupon {position: absolute; top: 214px; left: 50%; margin-left: -298px; width: 596px; height: 384px; line-height: 1; background: url(images/pageimg/special/christmas2015/couponbg.png) no-repeat;}
-.stage2 > .coupon > .coupon-top {position: absolute; top: -98px; left: 50%; margin-left: -177px; width: 353px; height: 142px; background: url(images/pageimg/special/christmas2015/coupon_top.png) no-repeat;}
+.stage2 > .coupon {position: absolute; top: 214px; left: 50%; margin-left: -298px; width: 596px; height: 384px; line-height: 1; background: url(images/couponbg.png) no-repeat;}
+.stage2 > .coupon > .coupon-top {position: absolute; top: -98px; left: 50%; margin-left: -177px; width: 353px; height: 142px; background: url(images/coupon_top.png) no-repeat;}
 .stage2 > .coupon > .coupon-close {display: block; position: absolute; top: 25px; right: 15px; width: 20px; height: 20px; font: bold 14px/20px monospace; background-color: #d7b482; color: #6b4923; text-align: center; text-decoration: none; border-radius: 50%;}
 
 .stage2 > .coupon > .go-shopping {display: block; position: absolute; top: 220px; left: 200px; width: 190px; height: 28px; line-height: 28px; font-size: 14px; color: #472604; background-color: #d7b482; text-align: center; text-decoration: none;}
 
-.stage2 > .coupon > .error-msg {width: 596px; padding-top: 70px; height: 205px; font-size: 16px; color: #fff1da; background: url(images/pageimg/special/christmas2015/coupon_mask.png) no-repeat; text-align: center; line-height: 1.5;}
+.stage2 > .coupon > .error-msg {width: 596px; padding-top: 70px; height: 205px; font-size: 16px; color: #fff1da; background: url(images/coupon_mask.png) no-repeat; text-align: center; line-height: 1.5;}
 
 .stage2 > .coupon > .content {text-align: center;}
 .coupon > .content > .coupon-desc {padding-top: 65px; font-size: 28px; color: #e4c394;}
