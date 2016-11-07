@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>easter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="easter16">
+  <section class="stage1" id="js_stage1">
+    <div class="title"></div>
+    <div class="butterfly1"></div><div class="butterfly2"></div>
+
+    <div class="egg1 none js-has-animation" data-animation="animated eggup time1"></div>
+    <div class="egg2 none js-has-animation" data-animation="animated eggup time2"></div>
+    <div class="egg3 none js-has-animation" data-animation="animated eggup time3"></div>
+    <div class="egg4 none js-has-animation" data-animation="animated eggup time4"></div>
+    <div class="egg5 none js-has-animation" data-animation="animated eggup time5"></div>
+    <div id="js_lastEgg" class="egg6 none js-has-animation" data-animation="animated eggup time6"></div>
+
+    <div class="leaf1 none js-leaf" data-animation="animated leaf time8"></div>
+    <div class="leaf2 none js-leaf" data-animation="animated leaf time9"></div>
+    <div class="leaf3 none js-leaf" data-animation="animated leaf time10"></div>
+    <div class="leaf4 none js-leaf" data-animation="animated leaf time11"></div>
+    <div class="leaf5 none js-leaf" data-animation="animated leaf time12"></div>
+    <div class="leaf6 none js-leaf" data-animation="animated leaf time13"></div>
+    <div class="leaf7 none js-leaf" data-animation="animated leaf time14"></div>
+    <div class="leaf8 none js-leaf" data-animation="animated leaf time15"></div>
+    <div class="leaf9 none js-leaf" data-animation="animated leaf time16"></div>
+    <div class="leaf10 none js-leaf" data-animation="animated leaf time17"></div>
+
+    <div class="bgtop"></div><div class="bgright"></div><div class="bgbottom"></div><div class="bgleft"></div>
+    <div id="js_getIt" class="bigegg none js-has-animation" data-animation="animated bigegg-drop time7" data-animation1="animated bigegg-shake time18"><i class="get"></i></div>
+  </section>
+  <section class="stage2 none" id="js_stage2">
+    <div class="stage-area"></div>
+    <div class="curtain-top"></div><div class="curtain-top-right"></div><div class="curtain-top-left"></div><div class="curtain-top-center"></div>
+    <div class="curtain-left js-has-animation" data-animation="animated a-curtain-left time1"></div><div class="curtain-right js-has-animation" data-animation="animated a-curtain-right time2"></div>
+    <div class="light-left"></div><div class="light-center"></div><div class="light-right"></div>
+    <div class="coupon-wrap">
+      <div id="js_couponContent">
+        <p class="desc" id="js_couponDesc"></p>
+        <p class="coupon" id="js_couponValue"></p>
+        <p class="tips" id="js_couponTips"></p>
+        <a class="link" href="#" id="js_goshopping">GET EGG-NORMOUS SAVINGS ></a>
+        <a href="#" class="close"></a>
+      </div>
+      <div class="err-msg-wrap none" id="js_couponError">
+        <span class="err-msg">Sorry,<br>you have already participated in this activity today.<br>Please try again tomorrow and win ANOTHER Mystery Gift!</span>
+      </div>
+    </div>
+    <div class="rabbit"></div>
+    <div class="rules-wrap">
+      <div class="rules-inner">
+        <dl class="rules">
+          <dt>Notes:</dt>
+          <dd>1. Every Gift is completely random;</dd>
+          <dd>2. Each registered member can receive ONE Mystery Gift every day during the promo;</dd>
+          <dd>3. Just enter your coupon code or FREE S Points at the Checkout page for an instant discount!</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</div>
+  <script src="../lib/jquery-1.12.4.js"></script>
+  <script src="../lib/layer/jquery.layer.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

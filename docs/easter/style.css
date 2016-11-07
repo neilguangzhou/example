@@ -1,0 +1,163 @@
+html, body {margin: 0; padding: 0;}
+body {font: 100%/1 Helvetica, sans-serif; color: #333; background-color: #000;}
+.none {display: none;}
+
+.easter16 {position: relative/* fixed ie7 bug */; min-width: 1200px; margin-top: 8px; height: 1000px; overflow: hidden; font-family: Arial, sans-serif;}
+
+/* ------------------
+       stage1
+------------------ */
+.stage1 {position: relative; height: 100%; background-color: #18d4c0;}
+
+.stage1 .title {position: absolute; top: 223px; left: 50%; margin-left: -490px; width: 1013px; height: 258px; background: url(images/stage1/en/title.png) no-repeat;}
+
+.stage1 .butterfly1 {position: absolute; bottom: 258px; left: 50%; margin-left: -368px; width: 80px; height: 80px; background: url(images/stage1/butterfly1.gif) no-repeat;}
+.stage1 .butterfly2 {position: absolute; bottom: 312px; left: 50%; margin-left: 355px; width: 90px; height: 90px; background: url(images/stage1/butterfly2.gif) no-repeat;}
+
+.stage1 .egg1 {position: absolute; bottom: -55px; left: 50%; margin-left: -804px; width: 172px; height: 239px; background: url(images/stage1/egg1.png) no-repeat;}
+.stage1 .egg2 {position: absolute; bottom: 0; left: 50%; margin-left: -567px; width: 222px; height: 313px; background: url(images/stage1/egg2.png) no-repeat;}
+.stage1 .egg3 {position: absolute; bottom: -58px; left: 50%; margin-left: -362px; width: 218px; height: 290px; background: url(images/stage1/egg3.png) no-repeat;}
+.stage1 .egg4 {position: absolute; bottom: -20px; left: 50%; margin-left: 202px; width: 168px; height: 227px; background: url(images/stage1/egg4.png) no-repeat;}
+.stage1 .egg5 {position: absolute; bottom: -50px; left: 50%; margin-left: 360px; width: 222px; height: 339px; background: url(images/stage1/egg5.png) no-repeat;}
+.stage1 .egg6 {position: absolute; bottom: -102px; left: 50%; margin-left: 630px; width: 206px; height: 290px; background: url(images/stage1/egg6.png) no-repeat;}
+.stage1 .bigegg {position: absolute; bottom: -90px; left: 50%; margin-left: -148px; width: 330px; height: 515px; cursor: pointer; background: url(images/stage1/bigegg.png) no-repeat;}
+.stage1 .bigegg.open {position: absolute; bottom: -90px; left: 50%; margin-left: -148px; width: 330px; height: 515px; cursor: pointer; background: url(images/stage1/bigeggopen.png) no-repeat;}
+.stage1 .bigegg .get {position: absolute; top: 115px; left: 73px; width: 194px; height: 124px; background: url(images/stage1/en/get.png) no-repeat;}
+.stage1 .bigegg.open .get {top: 49px;}
+
+.stage1 .leaf1 {transform: translate3d(354px, 410px, 0); position: absolute; bottom: 410px; left: 50%; margin-left: -354px; width: 26px; height: 35px; background: url(images/stage1/leaf1.png) no-repeat;}
+.stage1 .leaf2 {transform: translate3d(280px, 400px, 0); position: absolute; bottom: 400px; left: 50%; margin-left: -280px; width: 49px; height: 55px; background: url(images/stage1/leaf2.png) no-repeat;}
+.stage1 .leaf3 {transform: translate3d(230px, 250px, 0); position: absolute; bottom: 250px; left: 50%; margin-left: -230px; width: 26px; height: 46px; background: url(images/stage1/leaf3.png) no-repeat;}
+.stage1 .leaf4 {transform: translate3d(180px, 300px, 0); position: absolute; bottom: 300px; left: 50%; margin-left: -180px; width: 50px; height: 63px; background: url(images/stage1/leaf4.png) no-repeat;}
+.stage1 .leaf5 {transform: translate3d(180px, 200px, 0); position: absolute; bottom: 200px; left: 50%; margin-left: -180px; width: 38px; height: 45px; background: url(images/stage1/leaf5.png) no-repeat;}
+.stage1 .leaf6 {transform: translate3d(-190px, 210px, 0); position: absolute; bottom: 210px; left: 50%; margin-left: 190px; width: 67px; height: 63px; background: url(images/stage1/leaf6.png) no-repeat;}
+.stage1 .leaf7 {transform: translate3d(-250px, 320px, 0); position: absolute; bottom: 320px; left: 50%; margin-left: 250px; width: 29px; height: 59px; background: url(images/stage1/leaf7.png) no-repeat;}
+.stage1 .leaf8 {transform: translate3d(-270px, 270px, 0); position: absolute; bottom: 270px; left: 50%; margin-left: 270px; width: 46px; height: 66px; background: url(images/stage1/leaf8.png) no-repeat;}
+.stage1 .leaf9 {transform: translate3d(-320px, 370px, 0); position: absolute; bottom: 370px; left: 50%; margin-left: 320px; width: 14px; height: 32px; background: url(images/stage1/leaf9.png) no-repeat;}
+.stage1 .leaf10 {transform: translate3d(-390px, 260px, 0); position: absolute; bottom: 260px; left: 50%; margin-left: 390px; width: 12px; height: 31px; background: url(images/stage1/leaf10.png) no-repeat;}
+
+.stage1 .bgtop {position: absolute; top: 0; left: 50%; margin-left: -646px; width: 1328px; height: 271px; background: url(images/stage1/bgtop.png) no-repeat;}
+.stage1 .bgright {position: absolute; top: 0; right: 0; width: 271px; height: 701px; background: url(images/stage1/bgright.png) no-repeat;}
+.stage1 .bgbottom {position: absolute; bottom: 0; left: 50%; margin-left: -764px; width: 1493px; height: 257px; background: url(images/stage1/bgbottom.png) no-repeat;}
+.stage1 .bgleft {position: absolute; top: 0; left: 0; width: 246px; height: 736px; background: url(images/stage1/bgleft.png) no-repeat;}
+
+/* ------------------
+       stage2
+------------------ */
+.stage2 {position: relative; background-color: #381100; height: 1000px;}
+.stage2 .stage-area {z-index: 1; position: absolute; top: 683px; left: 0; width: 100%; height: 110px; background-color: #4b2718;}
+
+.stage2 .light-left {z-index: 2; position: absolute; top: 50px; left: 50%; margin-left: -600px; width: 509px; height: 584px; background: url(images/stage2/light1.png) no-repeat;}
+.stage2 .light-center {z-index: 2; position: absolute; top: 0; left: 50%; margin-left: -240px; width: 482px; height: 581px; background: url(images/stage2/light2.png) no-repeat;}
+.stage2 .light-right {z-index: 2; position: absolute; top: 50px; left: 50%; margin-left: 25px; width: 590px; height: 651px; background: url(images/stage2/light3.png) no-repeat;}
+
+.stage2 .curtain-top {z-index: 11; position: relative; height: 57px; background: url(images/stage2/curtain1.png) repeat-x;}
+.stage2 .curtain-top-right {z-index: 7; position: absolute; top: 30px; right: 30px; width: 451px; height: 351px; background: url(images/stage2/curtain3.png) no-repeat;}
+.stage2 .curtain-top-left {z-index: 8; position: absolute; top: 30px; left: 30px; width: 445px; height: 346px; background: url(images/stage2/curtain2.png) no-repeat;}
+.stage2 .curtain-top-center {z-index: 6; position: absolute; top: 30px; left: 0; width: 100%; height: 202px; background: url(images/stage2/curtain4.png) center top repeat-x;}
+.stage2 .curtain-right {z-index: 9; position: absolute; top: 30px; right: -850px; width: 1072px; height: 762px; background: url(images/stage2/curtain5.png) no-repeat;}
+
+.stage2 .curtain-left {z-index: 10; position: absolute; top: 30px; left: -840px; width: 1061px; height: 762px; background: url(images/stage2/curtain6.png) no-repeat;}
+
+.stage2 .coupon-wrap {z-index: 4; position: absolute; top: 193px; left: 50%; margin-left: -188px; width: 605px; height: 540px; line-height: 1; text-align: center; background: url(images/stage2/cntbg.png) no-repeat;}
+.stage2 .coupon-wrap .desc {padding-top: 200px; font-weight: bold; font-size: 30px; color: #431e03;}
+.stage2 .coupon-wrap .coupon {padding-top: 26px; font-weight: bold; font-size: 50px; color: #e02931;}
+.stage2 .coupon-wrap .tips {padding-top: 35px; font-size: 18px; color: #6c4c35;}
+.stage2 .coupon-wrap .tips > strong {font-weight: bold; color: #e02931;}
+.stage2 .coupon-wrap .link {display: inline-block; margin-top: 30px; border: 2px solid #fbb319; width: 276px; height: 32px; line-height: 32px; font-size: 14px; color: #fff; background-color: #431e03; border-radius: 40px;}
+.stage2 .coupon-wrap .err-msg-wrap {margin-top: 42px; width: 605px; height: 445px; line-height: 442px; background: url(images/stage2/errbg.png) no-repeat;}
+.stage2 .coupon-wrap .err-msg-wrap .err-msg {display: inline-block; font-size: 18px; line-height: 30px; color: #fff; vertical-align: middle; text-align: center;}
+.stage2 .coupon-wrap .close {position: absolute; top: 38px; right: -10px; width: 32px; height: 32px; background: url(images/stage2/close.png) no-repeat;}
+.stage2 .rabbit {z-index: 5; position: absolute; top: 290px; left: 50%; margin-left: -570px; width: 495px; height: 478px; background: url(images/stage2/rabbit.png) no-repeat;}
+
+.stage2 .rules-wrap {z-index: 3; position: absolute; bottom: 0; left: 0; width: 100%; border-top: 8px solid #fbb319; height: 200px; background-color: #962c46;}
+.stage2 .rules-inner {position: relative; margin: 0 auto; margin-top: 18px; width: 900px; height: 120px; background-color: rgba(255, 255, 255); background-color: rgba(255, 255, 255, .1);}
+/* 加:root剔除ie8- */
+:root .stage2 .rules-inner:before, .stage2 .rules-inner:after {position: absolute; top: -20px; content: ""; width: 16px; height: 60px; background-color: rgba(251, 179, 25, .4);}
+:root .stage2 .rules-inner:before {left: 8px; transform: rotateZ(40deg);}
+:root .stage2 .rules-inner:after {right: 8px; transform: rotateZ(-40deg);}
+.stage2 .rules {position: relative; top: 8px; left: 8px; padding-top: 10px; padding-left: 30px; width: 870px; height: 110px; font-size: 14px; line-height: 22px; color: #fff; background-color: rgba(255, 255, 255); background-color: rgba(255, 255, 255, .1);}
+
+
+
+/* ------------------
+       动画
+------------------ */
+.animated {-webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both;}
+.animated.infinite {-webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;}
+
+@keyframes eggup {
+    0% {opacity: 0; -webkit-transform: scale3d(1, .5, 1); transform: scale3d(1, .5, 1);}
+    70% {opacity: 1; -webkit-transform: scale3d(1, 1.3, 1); transform: scale3d(1, 1.3, 1);}
+    80% {-webkit-transform: scale3d(1, .8, 1); transform: scale3d(1, .8, 1);}
+    90% {-webkit-transform: scale3d(1, 1.1, 1); transform: scale3d(1, 1.1, 1);}
+    100% {opacity: 1; -webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1);}
+}
+.animated.eggup {-webkit-animation-name: eggup; animation-name: eggup; -webkit-transform-origin: center bottom 0; transform-origin: center bottom 0;}
+
+
+@keyframes bigegg-drop {
+    from {opacity: 0; -webkit-transform: translate3d(0, -100%, 0) scale3d(0, 0, 0);}
+    1% {display: block; opacity: 0; -webkit-transform: translate3d(0, -100%, 0) scale3d(1, 1, 1); transform: translate3d(0, -100%, 0) scale3d(1, 1, 1); -webkit-animation-timing-function: cubic-bezier(.19,.63,1,.66); animation-timing-function: cubic-bezier(.19,.63,1,.66);}
+    20% {opacity: 1; -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1); transform: translate3d(0, 0, 0) scale3d(1, 1, 1); -webkit-animation-timing-function: cubic-bezier(.19,.63,1,.66); animation-timing-function: cubic-bezier(.19,.63,1,.66);}
+    25% {-webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1); transform: translate3d(0, 0, 0) scale3d(1, 1, 1);}
+    40%, 60% {-webkit-transform: translate3d(0, 0, 0) scale3d(1, .8, 1); transform: translate3d(0, 0, 0) scale3d(1, .8, 1);}
+    50%, 70% {-webkit-transform: translate3d(0, 0, 0) scale3d(1, 1.1, 1); transform: translate3d(0, 0, 0) scale3d(1, 1.1, 1);}
+    80%, to {opacity: 1; -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1); transform: translate3d(0, 0, 0) scale3d(1, 1, 1);}
+}
+.animated.bigegg-drop {-webkit-animation-name: bigegg-drop; animation-name: bigegg-drop; -webkit-transform-origin: center bottom 0; transform-origin: center bottom 0;}
+
+@keyframes bigegg-shake {
+    0%, 100% {-webkit-transform: rotateZ(5deg); transform: rotateZ(5deg);}
+    50% {-webkit-transform: rotateZ(-5deg); transform: rotateZ(-5deg);}
+}
+.animated.bigegg-shake {-webkit-animation-name: bigegg-shake; animation-name: bigegg-shake; transform-origin: center bottom 0; transform-origin: center bottom 0;}
+
+
+@keyframes leaf {
+    from {opacity: 0;}
+    98% {opacity: 1; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+    100% {opacity: 0; -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+}
+.animated.leaf {-webkit-animation-name: leaf; animation-name: leaf;}
+
+
+@keyframes a-curtain-left {
+    from {-webkit-transform: translate3d(840px, 0, 0); transform: translate3d(840px, 0, 0);}
+    100% {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+}
+.animated.a-curtain-left {animation-name: a-curtain-left;}
+
+@keyframes a-curtain-right {
+    from {-webkit-transform: translate3d(-840px, 0, 0); transform: translate3d(-840px, 0, 0);}
+    100% {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+}
+.animated.a-curtain-right {-webkit-animation-name: a-curtain-right; animation-name: a-curtain-right;}
+
+
+/* 时间 */
+.stage1 .time1 {-webkit-animation-delay: 1.2s; animation-delay: 1.2s; -webkit-animation-duration: .5s; animation-duration: .5s;}
+.stage1 .time2 {-webkit-animation-delay: .2s; animation-delay: .2s; -webkit-animation-duration: .5s; animation-duration: .5s;}
+.stage1 .time3 {-webkit-animation-delay: 1.7s; animation-delay: 1.7s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time4 {-webkit-animation-delay: 2.2s; animation-delay: 2.2s; -webkit-animation-duration: .4s; animation-duration: .4s;}
+.stage1 .time5 {-webkit-animation-delay: .5s; animation-delay: .5s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time6 {-webkit-animation-delay: 2.2s; animation-delay: 2.2s; -webkit-animation-duration: .4s; animation-duration: .4s;}
+
+.stage1 .time7 {-webkit-animation-delay: 2.6s; animation-delay: 2.6s; -webkit-animation-duration: .5s; animation-duration: .5s;}
+
+.stage1 .time8 {-webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time9 {-webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time10 {-webkit-animation-delay: .1s; animation-delay: .1s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time11 {-webkit-animation-delay: .2s; animation-delay: .2s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time12 {-webkit-animation-delay: .2s; animation-delay: .2s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time13 {-webkit-animation-delay: .2s; animation-delay: .2s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time14 {-webkit-animation-delay: .1s; animation-delay: .1s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time15 {-webkit-animation-delay: .1s; animation-delay: .1s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time16 {-webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage1 .time17 {-webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+
+.stage1 .time18 {-webkit-animation-delay: 1s; animation-delay: 1s; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;}
+
+
+.stage2 .time1 {-webkit-animation-delay: .5s; animation-delay: .5s; -webkit-animation-duration: .8s; animation-duration: .8s;}
+.stage2 .time2 {-webkit-animation-delay: .5s; animation-delay: .5s; -webkit-animation-duration: .8s; animation-duration: .8s;}
