@@ -1,0 +1,225 @@
+.christmas {position: relative/* fixed ie7 bug */; height: 1000px; overflow: hidden;}
+.christmas > .stage1 {position: relative; overflow: hidden; height: 100%; background: url(images/pageimg/special/christmas2015/stage1bg.jpg) center top no-repeat;}
+.stage1 > .reindeer {z-index: 1; position: absolute; bottom: 36px; left: 50%; margin-left: -520px; width: 326px; height: 410px; background: url(images/pageimg/special/christmas2015/reindeer.png) no-repeat;}
+.stage1 > .reindeer > .reindeer-eye {position: absolute; top: 82px; left: 25px; width: 192px; height: 116px; background: url(images/pageimg/special/christmas2015/eye.gif) no-repeat;}
+.stage1 > .reindeer > .reindeer-nose {position: absolute; top: 136px; right: 40px; width: 72px; height: 50px; background: url(images/pageimg/special/christmas2015/nose.gif) no-repeat;}
+.stage1 > .santa-claus {z-index: 2; position: absolute; bottom: 65px; left: 50%; margin-left: 70px; width: 574px; height: 710px; background: url(images/pageimg/special/christmas2015/santa_claus.png) no-repeat;}
+
+.stage1 > .content-wrap {margin: 0 auto; margin-top: 30px; width: 1016px; height: 674px; background: url(images/pageimg/special/christmas2015/moon.png) 106px 0 no-repeat; overflow: hidden;}
+.stage1 > .content-wrap > .text {margin-top: 88px; width: 1016px; height: 448px; background-repeat: no-repeat;}
+.stage1 > .get-it {position: absolute; bottom: 234px; left: 50%; margin-left: -148px; width: 250px; height: 225px; background-repeat: no-repeat; cursor: pointer;}
+.stage1 > .get-it > .arrow {display: inline-block; margin-left: 168px; margin-top: 114px; width: 53px; height: 58px; background: url(images/pageimg/special/christmas2015/arrow.png) no-repeat;}
+.stage1 > .box1 {position:absolute; bottom: 11px; left: 50%; width: 117px; height: 138px; margin-left: -579px; background: url(images/pageimg/special/christmas2015/box1.png) no-repeat;}
+.stage1 > .box2 {position:absolute; bottom: 17px; left: 50%; width: 156px; height: 143px; margin-left: 445px; background: url(images/pageimg/special/christmas2015/box2.png) no-repeat;}
+.stage1 > .box3 {position:absolute; bottom: 34px; left: 50%; width: 115px; height: 109px; margin-left: 626px; background: url(images/pageimg/special/christmas2015/box3.png) no-repeat;}
+
+/* 多语言 */
+.lag-en .christmas > .stage1 .text {background-image: url(images/pageimg/special/christmas2015/en/text.png)}
+.lag-fr .christmas > .stage1 .text {background-image: url(images/pageimg/special/christmas2015/fr/text.png)}
+.lag-es .christmas > .stage1 .text {background-image: url(images/pageimg/special/christmas2015/es/text.png)}
+.lag-ru .christmas > .stage1 .text {background-image: url(images/pageimg/special/christmas2015/ru/text.png)}
+.lag-pt .christmas > .stage1 .text {background-image: url(images/pageimg/special/christmas2015/pt/text.png)}
+
+.lag-en .christmas > .stage1 > .get-it {background-image: url(images/pageimg/special/christmas2015/en/getit.png)}
+.lag-fr .christmas > .stage1 > .get-it {background-image: url(images/pageimg/special/christmas2015/fr/getit.png)}
+.lag-es .christmas > .stage1 > .get-it {background-image: url(images/pageimg/special/christmas2015/es/getit.png)}
+.lag-ru .christmas > .stage1 > .get-it {background-image: url(images/pageimg/special/christmas2015/ru/getit.png)}
+.lag-pt .christmas > .stage1 > .get-it {background-image: url(images/pageimg/special/christmas2015/pt/getit.png)}
+
+
+
+.christmas > .stage2 {position: relative; overflow: hidden; height: 100%; background: url(images/pageimg/special/christmas2015/stage2bg.jpg) center top no-repeat;}
+.stage2 > .oven {position: relative; margin: 0 auto; margin-top: 490px; width: 720px; height: 388px; background: url(images/pageimg/special/christmas2015/oven_top.png) no-repeat;}
+.stage2 > .oven > .fire {position: absolute; left: 282px; top: 200px; width: 140px; height: 153px; background: url(images/pageimg/special/christmas2015/fire.png) no-repeat;}
+.stage2 > .oven > .sock1 {position: absolute; left: 152px; top: 32px; width: 70px; height: 115px; background: url(images/pageimg/special/christmas2015/sock1.png) no-repeat;}
+.stage2 > .oven > .sock2 {position: absolute; right: 110px; top: 50px; width: 49px; height: 102px; background: url(images/pageimg/special/christmas2015/sock2.png) no-repeat;}
+.stage2 > .oven > .over-bottom {position: absolute; bottom: 0; left: 0; width: 100%; height: 65px; background: url(images/pageimg/special/christmas2015/oven_bottom.png) no-repeat;}
+
+.stage2 > .coupon {position: absolute; top: 214px; left: 50%; margin-left: -298px; width: 596px; height: 384px; line-height: 1; background: url(images/pageimg/special/christmas2015/couponbg.png) no-repeat;}
+.stage2 > .coupon > .coupon-top {position: absolute; top: -98px; left: 50%; margin-left: -177px; width: 353px; height: 142px; background: url(images/pageimg/special/christmas2015/coupon_top.png) no-repeat;}
+.stage2 > .coupon > .coupon-close {display: block; position: absolute; top: 25px; right: 15px; width: 20px; height: 20px; font: bold 14px/20px monospace; background-color: #d7b482; color: #6b4923; text-align: center; text-decoration: none; border-radius: 50%;}
+
+.stage2 > .coupon > .go-shopping {display: block; position: absolute; top: 220px; left: 200px; width: 190px; height: 28px; line-height: 28px; font-size: 14px; color: #472604; background-color: #d7b482; text-align: center; text-decoration: none;}
+
+.stage2 > .coupon > .error-msg {width: 596px; padding-top: 70px; height: 205px; font-size: 16px; color: #fff1da; background: url(images/pageimg/special/christmas2015/coupon_mask.png) no-repeat; text-align: center; line-height: 1.5;}
+
+.stage2 > .coupon > .content {text-align: center;}
+.coupon > .content > .coupon-desc {padding-top: 65px; font-size: 28px; color: #e4c394;}
+.coupon > .content > .coupon-value {padding-top: 16px; font-weight: bold; font-size: 46px; color: #fff9f0;}
+.coupon > .content > .coupon-tips {padding-top: 16px; font-size: 22px; color: #e4c394;}
+
+.stage2 > .note {margin: 0 auto; margin-top: 8px; width: 610px; color: #a56263; font-size: 13px; line-height: 1.25;}
+
+/* 动画 { */
+.animated {-webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; }
+
+.animated.infinite {-webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; }
+
+@-webkit-keyframes arrowDown {
+    from {-webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -10deg); transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -10deg); opacity: 0;}
+
+    to {-webkit-transform: translate3d(8px, 24px, 0) rotate3d(0, 0, 1, 20deg); transform: translate3d(8px, 24px, 0) rotate3d(0, 0, 1, 20deg); opacity: 1;}
+}
+@keyframes arrowDown {
+    from {-webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -10deg); transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -10deg); opacity: 0; }
+
+    to {-webkit-transform: translate3d(8px, 24px, 0) rotate3d(0, 0, 1, 20deg); transform: translate3d(8px, 24px, 0) rotate3d(0, 0, 1, 20deg); opacity: 1; }
+}
+.animated.a-arrowDown {animation-name: arrowDown;}
+
+@-webkit-keyframes moonUp {
+    from {-webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); opacity: 0;}
+
+    to {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1; }
+}
+@keyframes moonUp {
+    from {-webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); opacity: 0; }
+
+    to {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); opacity: 1; }
+}
+.animated.a-moonUp {-webkit-animation-name: moonUp; animation-name: moonUp; }
+
+@keyframes drop {
+    from {-webkit-transform: translateY(-300%); transform: translateY(-300%); opacity: 0;}
+    5% {opacity: 1;}
+    50% {-webkit-transform: translateY(0); transform: translateY(0);}
+    60% {-webkit-transform: translateY(-10%); transform: translateY(-10%);}
+    70% {-webkit-transform: translateY(0); transform: translateY(0);}
+    80% {-webkit-transform: translateY(-5%); transform: translateY(-5%);}
+    90% {-webkit-transform: translateY(0); transform: translateY(0);}
+    95% {-webkit-transform: translateY(-2%); transform: translateY(-2%);}
+    to {-webkit-transform: translateY(0); transform: translateY(0);}
+}
+@-webkit-keyframes drop {
+    from {-webkit-transform: translateY(-300%); transform: translateY(-300%); opacity: 0;}
+    5% {opacity: 1;}
+    50% {-webkit-transform: translateY(0); transform: translateY(0);}
+    60% {-webkit-transform: translateY(-10%); transform: translateY(-10%);}
+    70% {-webkit-transform: translateY(0); transform: translateY(0);}
+    80% {-webkit-transform: translateY(-5%); transform: translateY(-5%);}
+    90% {-webkit-transform: translateY(0); transform: translateY(0);}
+    95% {-webkit-transform: translateY(-2%); transform: translateY(-2%);}
+    to {-webkit-transform: translateY(0); transform: translateY(0);}
+}
+.animated.a-drop {-webkit-animation-name: drop; animation-name: drop;}
+
+@-webkit-keyframes getitUp {
+    from {-webkit-transform: translate3d(0, 200px, 0) scale3d(0, 0, 1); transform: translate3d(0, 200px, 0) scale3d(0, 0, 1);}
+    to {-webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1); transform: translate3d(0, 0, 0) scale3d(1, 1, 1);}
+}
+@keyframes getitUp {
+    from {-webkit-transform: translate3d(0, 200px, 0) scale3d(0, 0, 1); transform: translate3d(0, 200px, 0) scale3d(0, 0, 1);}
+    to {-webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1); transform: translate3d(0, 0, 0) scale3d(1, 1, 1);}
+}
+.animated.a-getitUp {-webkit-animation-name: getitUp; animation-name: getitUp;}
+
+@-webkit-keyframes getitShake {
+    from, to {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translate3d(-10px, 0, 0); transform: translate3d(-10px, 0, 0); }
+
+    20%, 40%, 60%, 80% {-webkit-transform: translate3d(10px, 0, 0); transform: translate3d(10px, 0, 0); }
+}
+
+@keyframes getitShake {
+    from, to {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
+
+    10%, 30%, 50%, 70%, 90% {-webkit-transform: translate3d(-10px, 0, 0); transform: translate3d(-10px, 0, 0); }
+
+    20%, 40%, 60%, 80% {-webkit-transform: translate3d(10px, 0, 0); transform: translate3d(10px, 0, 0); }
+}
+
+.animated.a-getitShake {
+    -webkit-animation-name: getitShake;
+    animation-name: getitShake;
+}
+
+@-webkit-keyframes fireFlash {
+    from, 50%, to {opacity: 1; }
+
+    25%, 75% {opacity: 0; }
+}
+@keyframes fireFlash {
+    from, 50%, to {opacity: .5; }
+
+    25%, 75% {opacity: 1; }
+}
+.animated.a-fireFlash {-webkit-animation-name: fireFlash; animation-name: fireFlash; }
+
+
+@-webkit-keyframes sockShake1 {
+    0%, 80% {-webkit-transform: rotate3D(0, 0, 1, 10deg); transform: rotate3D(0, 0, 1, 10deg); }
+    40% {-webkit-transform: rotate3D(0, 0, 1, -10deg); transform: rotate3D(0, 0, 1, -10deg); }
+    100% {-webkit-transform: rotate3D(0, 0, 1, 10deg); transform: rotate3D(0, 0, 1, 10deg);}
+}
+@keyframes sockShake1 {
+    0%, 80% {-webkit-transform: rotate3D(0, 0, 1, 10deg); transform: rotate3D(0, 0, 1, 10deg); }
+    40% {-webkit-transform: rotate3D(0, 0, 1, -10deg); transform: rotate3D(0, 0, 1, -10deg); }
+    100% {-webkit-transform: rotate3D(0, 0, 1, 10deg); transform: rotate3D(0, 0, 1, 10deg);}
+}
+
+.animated.a-sockShake1 {-webkit-animation-name: sockShake1; animation-name: sockShake1; animation-direction: alternate;}
+
+@-webkit-keyframes sockShake2 {
+    20% {-webkit-transform: rotate3D(0, 0, 1, 10deg); transform: rotate3D(0, 0, 1, 10deg); }
+    60% {-webkit-transform: rotate3D(0, 0, 1, -10deg); transform: rotate3D(0, 0, 1, -10deg); }
+    100% {-webkit-transform: rotate3D(0, 0, 1, -10deg); transform: rotate3D(0, 0, 1, -10deg); }
+}
+@keyframes sockShake2 {
+    0% {-webkit-transform: rotate3D(0, 0, 1, 10deg); transform: rotate3D(0, 0, 1, 10deg); }
+    40% {-webkit-transform: rotate3D(0, 0, 1, -10deg); transform: rotate3D(0, 0, 1, -10deg); }
+    100% {-webkit-transform: rotate3D(0, 0, 1, -10deg); transform: rotate3D(0, 0, 1, -10deg); }
+}
+
+.animated.a-sockShake2 {-webkit-animation-name: sockShake2; animation-name: sockShake2; animation-direction: alternate;}
+
+/*@keyframes coupon {
+  from {
+    transform: translate3d(0, 230px, 0) scale3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
+}*/
+
+@-webkit-keyframes coupon {
+    0% {-webkit-transform: translate3d(0, 500px, 0); transform: translate3d(0, 500px, 0); opacity: 0; }
+    2% {opacity: 1;}
+    20% {-webkit-transform: translate3d(0, -100px, 0);; transform: translate3d(0, -100px, 0);}
+    40% {-webkit-transform: translate3d(0, 50px, 0); transform: translate3d(0, 50px, 0);}
+    60% {-webkit-transform: translate3d(0, -30px, 0); transform: translate3d(0, -30px, 0);}
+    70% {-webkit-transform: translate3d(0, -20px, 0); transform: translate3d(0, -20px, 0);}
+    80% {-webkit-transform: translate3d(0, 10px, 0); transform: translate3d(0, 10px, 0);}
+    90% {-webkit-transform: translate3d(0, -10px, 0); transform: translate3d(0, -10px, 0);}
+    100% {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+}
+
+@keyframes coupon {
+    0% {-webkit-transform: translate3d(0, 500px, 0); transform: translate3d(0, 500px, 0); opacity: 0; }
+    2% {opacity: 1;}
+    20% {-webkit-transform: translate3d(0, -100px, 0);; transform: translate3d(0, -100px, 0);}
+    40% {-webkit-transform: translate3d(0, 50px, 0); transform: translate3d(0, 50px, 0);}
+    60% {-webkit-transform: translate3d(0, -30px, 0); transform: translate3d(0, -30px, 0);}
+    70% {-webkit-transform: translate3d(0, -20px, 0); transform: translate3d(0, -20px, 0);}
+    80% {-webkit-transform: translate3d(0, 10px, 0); transform: translate3d(0, 10px, 0);}
+    90% {-webkit-transform: translate3d(0, -10px, 0); transform: translate3d(0, -10px, 0);}
+    100% {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+}
+.animated.a-coupon {-webkit-animation-name: coupon; animation-name: coupon;}
+
+/* 时间 */
+.stage1 .time1 {-webkit-animation-delay: .2s; animation-delay: .2s; -webkit-animation-duration: 1s; animation-duration: 1s; }
+.stage1 .time2 {-webkit-animation-delay: 1.2s; animation-delay: 1.2s; -webkit-animation-duration: 1s; animation-duration: 1s; }
+.stage1 .time3 {-webkit-animation-duration: 1.5s; animation-duration: 1.5s; }
+.stage1 .time4 {-webkit-animation-delay: 1.4s; animation-delay: 1.4s; -webkit-animation-duration: 1s; animation-duration: 1s; }
+.stage1 .time5 {-webkit-animation-delay: 1.6s; animation-delay: 1.6s; -webkit-animation-duration: 1s; animation-duration: 1s; }
+.stage1 .time6 {-webkit-animation-delay: 1.8s; animation-delay: 1.6s; -webkit-animation-duration: .5s; animation-duration: .5s; }
+
+.stage2 .time1 {-webkit-animation-delay: 1s; animation-delay: 1s; -webkit-animation-duration: 1s; animation-duration: 1s;}
+.stage2 .time2 {-webkit-animation-duration: 3s; animation-duration: 3s;}
+.stage2 .time3 {-webkit-animation-delay: .2s; animation-delay: .2s; -webkit-animation-duration: 2s; animation-duration: 2s;}
+.stage2 .time4 {-webkit-animation-delay: .5s; animation-delay: .5s; -webkit-animation-duration: 2.6s; animation-duration: 2.6s;}
+
+.stage2 > .oven > .sock1 {transform-origin: 46px 20px;}
+.stage2 > .oven > .sock2 {transform-origin: 24px 14px;}
+/* 动画 } */
