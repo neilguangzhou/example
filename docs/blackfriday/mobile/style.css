@@ -1,0 +1,116 @@
+html, body {margin: 0; padding: 0;}
+html, body, .mm-page, #page {height: 100%; overflow: scroll;}
+body {font: 100%/1.2 Helvetica, sans-serif; color: #333;}
+.bc {margin: 0 auto;}
+.none {display: none;}
+
+
+#page {background: #000 url(images/bg.jpg);}
+.bf-stage {height: 520px; overflow: hidden;}
+.bf-stage .stage-one, .bf-stage .stage-two {margin: 0 auto; max-width: 414px;/* iphone6 portrait */}
+.bf-stage .bgCover {background-size: cover !important;}
+/* 第一幕 { */
+.stage-one {position: relative; height: 100%; background: url(images/s1bg.png) 60px 630px no-repeat;}
+.stage-one .light1 {position: absolute; top: 15px; left: 12px; width: 119px; height: 113px; background: url(images/s1light1.png) no-repeat;}
+.stage-one .light2 {position: absolute; top: 15px; right: 12px; width: 122px; height: 110px; background: url(images/s1light2.png) no-repeat;}
+.stage-one .text-wrap {position: absolute; top: 64px; left: 50%; margin-left: -131px; width: 263px; height: 332px;}
+.stage-one .red-rect {position: absolute; top: 0; left: 0; width: 263px; height: 332px; background: url(images/s1redbg.png) no-repeat;}
+.stage-one .white-rect {position: absolute; top: 0; left: 0; width: 263px; height: 332px; background: url(images/s1whitebg.png) no-repeat;}
+.stage-one .red-dot-rect {position: absolute; top: 0; left: 0; width: 263px; height: 332px; background: url(images/s1reddotbg.png) no-repeat;}
+.stage-one .text {position: relative; width: 100%; height: 100%; line-height: 1; text-align: center; background: url(images/s1textbg.png) 40px 55px no-repeat; background-size: 189px 160px;}
+.stage-one .text .promotion-date {padding-top: 40px; font-weight: bold; font-size: 12px; color: #000;}
+.stage-one .text .promotion-title1, .stage-one .text .promotion-title2 {font-weight: bold; color: #ff0416;}
+.stage-one .text .promotion-title1 {font-size: 46px;}
+.stage-one .text .promotion-title2 {font-size: 64px;}
+.stage-one .text .promotion-title3{display: inline-block; font-size: 34px; border-top: 3px solid #000; color: #000;}
+.stage-one .text .promotion-title4{margin-top: 25px; padding: 5px 0; width: 156px; line-height: 16px; font-size: 12px; color: #fff; background-color: #000; border-radius: 5px;}
+.stage-one .hat {position: absolute; top: 345px; left: 50%; margin-left: -77px; width: 154px; height: 155px; background: url(images/s1hat.png) no-repeat; cursor: pointer;}
+.stage-one .open-it-text {margin-top: 114px; font-weight: bold; font-size: 20px; line-height: 20px; text-align: center; color: #fff; cursor: pointer;}
+/* 第一幕 } */
+
+/* 第二幕 { */
+.stage-two {position: relative; height: 100%; overflow: hidden;}
+
+.stage-two .coupon-box {overflow: hidden; z-index: 2; position: relative; margin-top: 55px; width: 88%; height: 175px; text-align: center; border-radius: 10px; line-height: 1; background: #fff url(images/s2couponbox.png) center 108px no-repeat; background-color: rgba(255, 255, 255, .9); box-shadow: 0 5px 5px 0 #252525; background-size: 251px auto;}
+.stage-two .coupon-box > .close {position: absolute; top: 8px; right: 8px; width: 22px; height: 22px; font: bold 14px/22px monospace; color: #fff; background-color: #000; cursor: pointer; border-radius: 11px;}
+.stage-two .coupon-box .title {margin-top: 14px; width: 199px; height: 26px; line-height: 26px; font-weight: bold; font-size: 12px; color: #fff; background: url(images/s2coupontitle.png) no-repeat;}
+.stage-two .coupon-box .desc {margin-top: 10px; font-weight: bold; font-size: 16px; color: #000;}
+.stage-two .coupon-box .value {margin: 8px 0; font-weight: bold; font-size: 24px; color: #ff0315;}
+.stage-two .coupon-box .tips {font-size: 12px;}
+.stage-two .coupon-box .go-shop {display: inline-block; margin-top: 15px; padding: 0 15px; height: 30px; line-height: 30px; font-size: 12px; text-decoration: none; color: #fff; background-color: #000; border-radius: 5px;}
+.go-shop > i {display: inline-block; margin-left: 10px; height: 0; border: 6px solid transparent; border-left-color: #fff; vertical-align: middle;}
+.stage-two .coupon-box .error-text {padding-top: 22px; font-size: 12px; color: #000;}
+.coupon-box .error-text > p {margin-bottom: 10px;}
+.stage-two .firework {z-index: 1; position: absolute; top: 20px; left: 0; width: 100%; height: 262px; background: url(images/s2bg.png) no-repeat;}
+
+.stage-two .hat-opened {margin-top: 30px; width: 216px; height: 96px; background: url(images/s2hat.png) right top no-repeat;}
+.stage-two .rules {position: relative; margin-top: 25px; padding: 10px 20px; width: 230px; font-size: 12px; color: #fff; background-color: #252525;}
+.stage-two .rules > dd {margin-top: 5px;}
+.rules:before, .rules:after, .rules > dt:before, .rules > dt:after {display: block; content: ""; position: absolute; height: 5px; width: 5px; background-color: #717171; border-radius: 5px;}
+.rules:before {top: 5px; left: 5px;}
+.rules:after {bottom: 5px; left: 5px;}
+.rules > dt:before {top: 5px; right: 5px;}
+.rules > dt:after {bottom: 5px; right: 5px;}
+/* 第二幕 } */
+
+/* 动画 { */
+.has-animation {display: none;}
+.animated {-webkit-animation-fill-mode: both; animation-fill-mode: both;}
+
+@-webkit-keyframes zoomIn {
+    from {opacity: 0; -webkit-transform: scale3d(.3, .3, .3); transform: scale3d(.3, .3, .3);}
+    50% {opacity: 1;}
+}
+@keyframes zoomIn {
+    from {opacity: 0; -webkit-transform: scale3d(.3, .3, .3); transform: scale3d(.3, .3, .3);}
+    50% {opacity: 1;}
+}
+.zoomIn {-webkit-animation-name: zoomIn; animation-name: zoomIn;}
+
+@-webkit-keyframes flash {
+    from, 50%, to {color: #fff;}
+    25%, 75% {color: #ff0315;}
+}
+@keyframes flash {
+    from, 50%, to {color: #fff;}
+    25%, 75% {color: #ff0315;}
+}
+.flash {-webkit-animation-name: flash; animation-name: flash;}
+
+@-webkit-keyframes wobble {
+    from {-webkit-transform: none; transform: none; -webkit-transform-origin: center bottom; transform-origin: center bottom;}
+    15% {-webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg); transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);}
+    30% {-webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg); transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);}
+    45% {-webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg); transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);}
+    60% {-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg); transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);}
+    75% {-webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg); transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);}
+    to {-webkit-transform: none; transform: none;}
+}
+@keyframes wobble {
+    from {-webkit-transform: none; transform: none; -webkit-transform-origin: center bottom; transform-origin: center bottom;}
+    15% {-webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg); transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);}
+    30% {-webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg); transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);}
+    45% {-webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg); transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);}
+    60% {-webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg); transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);}
+    75% {-webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg); transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);}
+    to {-webkit-transform: none; transform: none;}
+}
+.wobble {-webkit-animation-name: wobble; animation-name: wobble;}
+
+@-webkit-keyframes shot {
+    from {-webkit-transform: translate3d(0, 130px, 0) scale3d(0, 0, 1); transform: translate3d(0, 130px, 0) scale3d(0, 0, 1);}
+    to {-webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1); transform: translate3d(0, 0, 0) scale3d(1, 1, 1);}
+}
+@keyframes shot {
+    from {-webkit-transform: translate3d(0, 130px, 0) scale3d(0, 0, 1); transform: translate3d(0, 130px, 0) scale3d(0, 0, 1);}
+    to {-webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1); transform: translate3d(0, 0, 0) scale3d(1, 1, 1);}
+}
+.shot {-webkit-animation-name: shot; animation-name: shot;}
+
+/* 第一幕时间安排 */
+.stage1-time1 {-webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite;}
+
+/* 第二幕时间安排 */
+.stage2-time1 {-webkit-animation-delay: .6s; animation-delay: .6s; -webkit-animation-duration: 1s; animation-duration: 1s;}
+.stage2-time2 {-webkit-animation-delay: 1s; animation-delay: 1s; -webkit-animation-duration: 1s; animation-duration: 1s;}
+/* 动画 } */

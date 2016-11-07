@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>easter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bf-stage">
+        <section class="stage-one" id="js_stageOne">
+            <div class="light1"></div>
+            <div class="light2"></div>
+            <div class="text-wrap">
+                <div class="red-rect has-animation" data-animation="animated rollInLeft stage1-time1"></div>
+                <div class="white-rect has-animation" data-animation="animated rollInRight stage1-time2"></div>
+                <div class="red-dot-rect has-animation" data-animation="animated rollInLeft stage1-time3"></div>
+                <div id="js_text" class="text has-animation" data-animation="animated zoomIn stage1-time4">
+                    <p class="promotion-date">24/11 - 30/11</p>
+                    <p class="promotion-title1">MYSTERY</p>
+                    <p class="promotion-title2">GIFTS</p>
+                    <p class="promotion-title3">BONANZA</p>
+                    <p class="promotion-title4 bc">CRAZY BLACK FRIDAY & CYBER MONDAY</p>
+                </div>
+            </div>
+            <div class="hat has-animation" id="js_openIt" data-animation="animated drop stage1-time5" data-animation2="animated wobble stage1-time7"><p id="js_openItText" class="open-it-text has-animation" data-animation="animated zoomInDown stage1-time6" data-animation2="animated flash stage1-time7" >OPEN IT NOW</p></div>
+        </section>
+        <section class="stage-two none" id="js_stageTwo">
+            <div class="coupon-box bc has-animation" data-animation="animated shot stage2-time1">
+                <div id="js_coupon" class="none">
+                    <h3 class="title bc">YOU'RE SOOOO LUCKY</h3>
+                    <p id="js_couponDesc" class="desc"></p>
+                    <p id="js_couponValue" class="value"></p>
+                    <p id="js_couponTips" class="tips"></p>
+                </div>
+                <div id="js_couponError" class="error-text none">
+                    <p>Sorry, you have participated in this activity today,</p>
+                    <p>Please come back tomorrow and</p>
+                    <p>win ANOTHER Surprise Gift!</p>
+                </div>
+                <a class="go-shop" href="#">Go Shopping Now<i></i></a>
+                <i class="close" id="js_closeCouponBox">x</i>
+            </div>
+            <div class="hat-opened bc"></div>
+            <dl class="rules bc">
+                <dt>Notes:</dt>
+                <dd>1. Every Gift is completely random;</dd>
+                <dd>2. Each registered member can gain ONE Mystery Gift every day;</dd>
+                <dd>3. Just enter your coupon code or FREE Z Points at the Checkout page for an instant discount!</dd>
+            </dl>
+            <div class="firework has-animation" data-animation="animated zoomIn stage2-time2"></div>
+        </section>
+    </div>
+    <script src="../../lib/jquery-1.12.4.js"></script>
+    <script src="../../lib/layer/jquery.layer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
