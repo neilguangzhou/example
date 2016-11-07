@@ -1,3 +1,6 @@
+html, body {padding: 0; margin: 0; font: 100%/1.5 Helvetica, sans-serif; color: #333;}
+
+
 .christmas {position: relative/* fixed ie7 bug */; height: 1000px; overflow: hidden;}
 .christmas > .stage1 {position: relative; overflow: hidden; height: 100%; background: url(images/stage1bg.jpg) center top no-repeat;}
 .stage1 > .reindeer {z-index: 1; position: absolute; bottom: 36px; left: 50%; margin-left: -520px; width: 326px; height: 410px; background: url(images/reindeer.png) no-repeat;}
@@ -14,20 +17,8 @@
 .stage1 > .box3 {position:absolute; bottom: 34px; left: 50%; width: 115px; height: 109px; margin-left: 626px; background: url(images/box3.png) no-repeat;}
 
 /* 多语言 */
-.lag-en .christmas > .stage1 .text {background-image: url(images/en/text.png)}
-.lag-fr .christmas > .stage1 .text {background-image: url(images/fr/text.png)}
-.lag-es .christmas > .stage1 .text {background-image: url(images/es/text.png)}
-.lag-ru .christmas > .stage1 .text {background-image: url(images/ru/text.png)}
-.lag-pt .christmas > .stage1 .text {background-image: url(images/pt/text.png)}
-
-.lag-en .christmas > .stage1 > .get-it {background-image: url(images/en/getit.png)}
-.lag-fr .christmas > .stage1 > .get-it {background-image: url(images/fr/getit.png)}
-.lag-es .christmas > .stage1 > .get-it {background-image: url(images/es/getit.png)}
-.lag-ru .christmas > .stage1 > .get-it {background-image: url(images/ru/getit.png)}
-.lag-pt .christmas > .stage1 > .get-it {background-image: url(images/pt/getit.png)}
-
-
-
+.christmas > .stage1 .text {background-image: url(images/en/text.png)}
+.christmas > .stage1 > .get-it {background-image: url(images/en/getit.png)}
 .christmas > .stage2 {position: relative; overflow: hidden; height: 100%; background: url(images/stage2bg.jpg) center top no-repeat;}
 .stage2 > .oven {position: relative; margin: 0 auto; margin-top: 490px; width: 720px; height: 388px; background: url(images/oven_top.png) no-repeat;}
 .stage2 > .oven > .fire {position: absolute; left: 282px; top: 200px; width: 140px; height: 153px; background: url(images/fire.png) no-repeat;}

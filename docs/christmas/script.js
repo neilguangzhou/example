@@ -14,7 +14,6 @@
 
     requestCoupon();
   });
-  requestCoupon();
 
   canUseAnimate && play($stageOne);
 
@@ -52,9 +51,8 @@
     $openIt.data("processing", true); // 标记，避免多次提交
 
     $.ajax({
-      //url: "{/literal}{$imgcache_url}{literal}images/pageimg/special/christmas2015/data/gift.json",
-      url: "/fun/index.php?act=christmas",
-      type: "POST",
+      url: "data/gift.json",
+      type: "GET",
       dataType: "json"
     }).done(function(json) {
       $openIt.data("processing", false);
@@ -137,20 +135,19 @@
     var defaultOpts = {
       shade: options.shade ? options.shade : [0.8, '#000', true],
       area: ['auto', 'auto'],
-      title: options.title ? options.title : jsLg.message,
+      title: options.title ? options.title : 'Message',
       border: [1, 1, '#ddd', true],
       dialog: {
         msg: options.msg ? options.msg : "",
         btns: 1,
         type: options.typeTag ? options.typeTag : 0,
-        btn: [jsLg.ok],
+        btn: ['Ok'],
         yes: function(index) {
           options.callBack ? options.callBack(options.callBackArg ? options.callBackArg : "") : "";
           layer.close(index);
         }
       }
     }
-    //defaultOpts = $.extend(true,defaultOpts,options );
     return $.layer(defaultOpts);
   }
 })(window, jQuery);

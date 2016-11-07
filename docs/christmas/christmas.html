@@ -38,69 +38,26 @@
         <p id="js_couponTips" class="coupon-tips"></p>
       </div>
       <div id="js_couponError" class="error-msg none">
-        {if $cur_lang == 'fr'}
-        <p>Désolé,</p>
-        <p>vous avez déjà participé à cette activité aujourd'hui.</p>
-        <p>Veuillez essayer de nouveau demain et gagner</p>
-        <p>UN AUTRE Cadeau Mystère!</p>
-        {elseif $cur_lang == 'es'}
-        <p>Lo sentimos,</p>
-        <p>ya ha participado en esta actividad hoy.</p>
-        <p>Por favor, inténtelo de mañana y ganar</p>
-        <p>otro regalo misterio!</p>
-        {elseif $cur_lang == 'ru'}
-        <p>Извините,</p>
-        <p>сегодня вы уже приняли участие в этой деятельности.</p>
-        <p>Пожалуйста, попробуйте завтра и выиграйте </p>
-        <p>еще один загадочный подарок!</p>
-        {elseif $cur_lang == 'pt'}
-        <p>Desculpe,</p>
-        <p>você já participou dessa atividade hoje.</p>
-        <p>Por favor, tente novamente amanhã e ganha</p>
-        <p>outro presente segreto !</p>
-        {else}
         <p>Sorry,</p>
         <p>you have already participated in this activity today.</p>
         <p>Please try again tomorrow and</p>
         <p>win ANOTHER Mystery Gift!</p>
         {/if}
       </div>
-      <a id="js_goshopping" href="{$DOMAIN}{if $cur_lang != $default_lang}/{$cur_lang}/{/if}" class="go-shopping">go shopping now ►</a>
-      <a href="{$DOMAIN}{if $cur_lang != $default_lang}/{$cur_lang}/{/if}" class="coupon-close">x</a>
+      <a id="js_goshopping" href="#" class="go-shopping">go shopping now ►</a>
+      <a href="#" class="coupon-close">x</a>
       <div class="coupon-top"></div>
     </div>
     <dl class="note">
-      {if $cur_lang == 'fr'}
-      <dt>Remarques:</dt>
-      <dd>1. Chaque cadeau est complètement aléatoire;</dd>
-      <dd>2. Chaque membre inscrit peut recevoir un Cadeau Mystère chaque jour pendant la promotion;</dd>
-      <dd>3. Il suffit d'entrer votre code de coupon ou S Points GRATUITS à la page de paiement pour une remise immédiate!</dd>
-      {elseif $cur_lang == 'es'}
-      <dt>NOTA:</dt>
-      <dd>1. Cada regalo es completamente aleatorio;</dd>
-      <dd>2. Cada miembro registrado puede recibir UNO Regalo Misterio todos los días durante la promoción;</dd>
-      <dd>3. Simplemente introduce su el código de cupón o PUNTOS GRATIS DE S en la página de pago para un descuento al instante!</dd>
-      {elseif $cur_lang == 'ru'}
-      <dt>Внимание</dt>
-      <dd>1. Каждый подарок совершенно случайный;</dd>
-      <dd>2. Каждый день каждый зарегистрированный член может получить один загадочный подарок в течение распродажи;</dd>
-      <dd>3. Пожалуйста, введите код купона или БЕСПЛАТНО S Балл, указанные на странице заказе для скидки!</dd>
-      {elseif $cur_lang == 'pt'}
-      <dt>Nota:</dt>
-      <dd>1,Todo presente é completamente aleatório</dd>
-      <dd>2,Cada membro registado pode receber um presente surpresa por dia.(Todos os dias ,durante a promoção)</dd>
-      <dd>3,Basta inserir o seu código de cupom ou pontos "Free S" na página de checkout para receber um desconto imediato!</dd>
-      {else}
       <dt>Notes:</dt>
       <dd>1. Every Gift is completely random;</dd>
       <dd>2. Each registered member can receive ONE Mystery Gift every day during the promo;</dd>
       <dd>3. Just enter your coupon code or FREE S Points at the Checkout page for an instant discount!</dd>
-      {/if}
     </dl>
   </section>
 </div>
 <script src="../lib/jquery-1.12.4.js"></script>
-<script src="../lib/jquery.layer.js"></script>
+<script src="../lib/layer/jquery.layer.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

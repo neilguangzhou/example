@@ -9,14 +9,14 @@
  @Copyright: Sentsin Xu(贤心)
  @官网说明：http://sentsin.com/jquery/layer
  @赞助layer: https://me.alipay.com/sentsin
-        
+
  *************************************************************/
 
-;!function(window, undefined){      
+;!function(window, undefined){
 "use strict";
 
-var pathType = false, //是否采用自动获取绝对路径。false：将采用下述变量中的配置
-pathUrl = JS_IMG_URL , //上述变量为false才有效，当前layerjs所在目录(不用填写host，相对站点的根目录即可)。
+var pathType = true, //是否采用自动获取绝对路径。false：将采用下述变量中的配置
+pathUrl = '' , //上述变量为false才有效，当前layerjs所在目录(不用填写host，相对站点的根目录即可)。
 
 $, win, ready = {
     hosts: (function(){
@@ -24,14 +24,14 @@ $, win, ready = {
         dk = dk ? dk[0] : '';
         return 'http://' + document.domain + dk + '/';
     }()),
-    
+
     getPath: function(){
         var js = document.scripts || $('script'), jsPath = js[js.length - 1].src;
         if(pathType){
             return jsPath.substring(0, jsPath.lastIndexOf("/") + 1);
         } else {
             return  pathUrl;
-        } 
+        }
     }
 };
 
@@ -41,7 +41,7 @@ window.layer = {
     ie6: !-[1,] && !window.XMLHttpRequest,
     index: 0,
     path: ready.getPath(),
-    
+
     //载入模块
     use: function(module, callback){
         var i = 0, head = $('head')[0];
@@ -62,11 +62,11 @@ window.layer = {
             callback && callback();
         });
     },
-    
+
     ready: function(callback){
-        return layer.use('mincss/layer_min.css', callback);
-    }, 
-    
+        return layer.use('layer.css', callback);
+    },
+
     //普通对话框，类似系统默认的alert()
     alert: function(alertMsg, alertType, alertTit, alertYes){
         return $.layer({
@@ -74,16 +74,16 @@ window.layer = {
             title : alertTit,
             area: ['auto', 'auto']
         });
-    }, 
-    
+    },
+
     //询问框，类似系统默认的confirm()
-    confirm: function(conMsg, conYes, conTit, conNo){ 
+    confirm: function(conMsg, conYes, conTit, conNo){
         return $.layer({
             dialog : {msg : conMsg, type : 4, btns : 2, yes : conYes, no : conNo},
             title : conTit
-        }); 
+        });
     },
-    
+
      //普通消息框，一般用于行为成功后的提醒,默认两秒自动关闭
     msg: function(msgText, msgTime, parme, callback){
         var icon, conf = {title: false, closeBtn: false};
@@ -100,9 +100,9 @@ window.layer = {
         conf.time = msgTime;
         conf.dialog = {msg: msgText, type: icon};
         conf.end = typeof parme === 'function' ? parme : callback;
-        return $.layer(conf);   
-    }, 
-    
+        return $.layer(conf);
+    },
+
     //加载层快捷引用
     load: function(parme, loadIcon){
         if(typeof parme === 'string'){
@@ -119,8 +119,8 @@ window.layer = {
                 closeBtn : [0 , false]
             });
         }
-    }, 
-    
+    },
+
     //tips层快捷引用
     tips: function(html, follow, parme, maxWidth, guide, style){
         var conf = {type: 4, shade: false, success: function(layerE){
@@ -138,14 +138,14 @@ window.layer = {
     }
 };
 
-var Class = function(setings){  
+var Class = function(setings){
     var config = this.config;
     layer.index++;
     this.index = layer.index;
     this.config = $.extend({} , config , setings);
     this.config.dialog = $.extend({}, config.dialog , setings.dialog);
     this.config.page = $.extend({}, config.page , setings.page);
-    this.config.iframe = $.extend({}, config.iframe , setings.iframe);  
+    this.config.iframe = $.extend({}, config.iframe , setings.iframe);
     this.config.loading = $.extend({}, config.loading , setings.loading);
     this.config.tips = $.extend({}, config.tips , setings.tips);
     this.creat();
@@ -168,7 +168,7 @@ Class.pt.config = {
     time: 0,
     bgcolor: '#fff',
     border: [8 , 0.3 , '#000', true],
-    zIndex: 19891014, 
+    zIndex: 19891014,
     maxWidth: 400,
     dialog: {btns : 1, btn : ['确定','取消'], type : 3, msg : '', yes : function(index){ layer.close(index);}, no : function(index){ layer.close(index);}
     },
@@ -188,16 +188,16 @@ Class.pt.space = function(html){
     var html = html || '', times = this.index, config = this.config, dialog = config.dialog, dom = this.dom,
     ico = dialog.type === -1 ? '' : '<span class="xubox_msg xulayer_png32 xubox_msgico xubox_msgtype' + dialog.type + '"></span>',
     frame = [
-    '<div class="xubox_dialog">'+ ico +'<span class="xubox_msg xubox_text" style="'+ (ico ? '' : 'padding-left:20px') +'">' + dialog.msg + '</span></div>', 
+    '<div class="xubox_dialog">'+ ico +'<span class="xubox_msg xubox_text" style="'+ (ico ? '' : 'padding-left:20px') +'">' + dialog.msg + '</span></div>',
     '<div class="xubox_page">'+ html +'</div>',
-    '<iframe allowtransparency="true" id="'+ dom.ifr +''+ times +'" name="'+ dom.ifr +''+ times +'" onload="$(this).removeClass(\'xubox_load\');" class="'+ dom.ifr +'" frameborder="0" src="' + config.iframe.src + '"></iframe>',             
+    '<iframe allowtransparency="true" id="'+ dom.ifr +''+ times +'" name="'+ dom.ifr +''+ times +'" onload="$(this).removeClass(\'xubox_load\');" class="'+ dom.ifr +'" frameborder="0" src="' + config.iframe.src + '"></iframe>',
     '<span class="xubox_loading xubox_loading_'+ config.loading.type +'"></span>',
     '<div class="xubox_tips" style="'+ config.tips.style[0] +'"><div class="xubox_tipsMsg">'+ config.tips.msg +'</div><i class="layerTipsG"></i></div>'
     ],
     shade = '' , border = '', zIndex = config.zIndex + times,
     shadeStyle = 'z-index:'+ zIndex +'; background-color:'+ config.shade[1] +'; opacity:'+ config.shade[0] +'; filter:alpha(opacity='+ config.shade[0]*100 +');';
 
-    config.shade[2] && (shade = '<div times="'+ times +'" id="xubox_shade' + times + '" class="xubox_shade" style="'+ shadeStyle +'"></div>');  
+    config.shade[2] && (shade = '<div times="'+ times +'" id="xubox_shade' + times + '" class="xubox_shade" style="'+ shadeStyle +'"></div>');
 
     config.zIndex = zIndex;
     var title = '', closebtn = '', borderStyle = "z-index:"+ (zIndex-1) +";  background-color: "+ config.border[2] +"; opacity:"+ config.border[1] +"; filter:alpha(opacity="+ config.border[1]*100 +"); top:-"+ config.border[0] +"px; left:-"+ config.border[0] +"px;";
@@ -205,8 +205,8 @@ Class.pt.space = function(html){
     config.border[3] && (border = '<div id="xubox_border'+ times +'" class="xubox_border" style="'+ borderStyle +'"></div>');
     config.closeBtn[1] && (closebtn = '<a class="xubox_close xulayer_png32 xubox_close' + config.closeBtn[0] +'" href="javascript:;"></a>');
     config.title[1] && (title = '<h2 class="xubox_title"><em>' + config.title[0] + '</em></h2>')
-    var boxhtml = '<div times="'+ times +'" showtime="'+ config.time +'" style="z-index:'+ zIndex +'" id="'+ dom.lay +''+ times 
-    +'" class="'+ dom.lay +'">' 
+    var boxhtml = '<div times="'+ times +'" showtime="'+ config.time +'" style="z-index:'+ zIndex +'" id="'+ dom.lay +''+ times
+    +'" class="'+ dom.lay +'">'
     + '<div style="background-color:'+ config.bgcolor +'; z-index:'+ zIndex +'" class="xubox_main">'
     + frame[config.type]
     + title
@@ -252,7 +252,7 @@ Class.pt.creat = function(){
                     setSpace();
                     $(page.dom).show().wrap(space[1]);
                 }else{
-                    return; 
+                    return;
                 }
             }
         break;
@@ -262,7 +262,7 @@ Class.pt.creat = function(){
         break;
         case 3:
             config.title = ['', false];
-            config.area = ['auto', 'auto']; 
+            config.area = ['auto', 'auto'];
             config.closeBtn = ['', false];
             $('.xubox_loading')[0] && layer.close($('.xubox_loading').parents('.'+dom.lay).attr('times'));
             setSpace();
@@ -277,15 +277,15 @@ Class.pt.creat = function(){
             setSpace();
             body.append(space[1]);
             $('#'+ dom.lay + times).find('.xubox_close').css({top: 6, right: 7});
-        break;      
-        default: 
+        break;
+        default:
             config.title[1] || (config.area = ['auto','auto']);
             $('.xubox_dialog')[0] && layer.close($('.xubox_dialog').parents('.'+dom.lay).attr('times'));
             setSpace();
             body.append(space[1]);
         break;
     };
-    
+
     this.layerS = $('#xubox_shade' + times);
     this.layerB = $('#xubox_border' + times);
     this.layerE = $('#'+ dom.lay + times);
@@ -297,7 +297,7 @@ Class.pt.creat = function(){
     this.layerPage = layerE.find('.xubox_page');
     this.layerBtn = layerE.find('.xubox_botton');
 
-    //设置layer面积坐标等数据 
+    //设置layer面积坐标等数据
     if(config.offset[1].indexOf("px") != -1){
         var _left = parseInt(config.offset[1]);
     }else{
@@ -308,7 +308,7 @@ Class.pt.creat = function(){
         }
     };
     layerE.css({left: _left + config.border[0], width: config.area[0], height: config.area[1]});
-    config.fix ? layerE.css({top: parseInt(config.offset[0]) + config.border[0]}) : layerE.css({top: parseInt(config.offset[0]) + win.scrollTop() + config.border[0], position: 'absolute'});   
+    config.fix ? layerE.css({top: parseInt(config.offset[0]) + config.border[0]}) : layerE.css({top: parseInt(config.offset[0]) + win.scrollTop() + config.border[0], position: 'absolute'});
 
 
     //配置按钮 对话层形式专有
@@ -343,7 +343,7 @@ Class.pt.set = function(times){
     var that = this, layerE = that.layerE, config = that.config, dialog = config.dialog, page = config.page, loading = config.loading, dom = that.dom;
     that.autoArea(times);
     if(config.title[1]){
-        layer.ie6 && that.layerTitle.css({width : layerE.outerWidth()});    
+        layer.ie6 && that.layerTitle.css({width : layerE.outerWidth()});
     }else{
         config.type != 4 && layerE.find('.xubox_close').addClass('xubox_close1');
     };
@@ -351,19 +351,19 @@ Class.pt.set = function(times){
     layerE.attr({'type' :  that.type[config.type]});
 
     switch(config.type){
-        case 1:     
+        case 1:
             layerE.find(page.dom).addClass('layer_pageContent');
             config.shade[2] && layerE.css({zIndex: config.zIndex + 1});
             config.title[1] && that.layerPage.css({top: that.layerTitle.outerHeight()});
         break;
-        
+
         case 2:
             var iframe = layerE.find('.'+ dom.ifr), heg = layerE.height();
             iframe.addClass('xubox_load').css({width: layerE.width()});
             config.title[1] ? iframe.css({top: that.layerTitle.height(), height: heg - that.layerTitle.height()}) : iframe.css({top: 0, height : heg});
             layer.ie6 && iframe.attr('src', config.iframe.src);
         break;
-        
+
         case 3:
         break;
         case 4 :
@@ -376,19 +376,19 @@ Class.pt.set = function(times){
 
             config.tips.isGuide || tipsG.remove();
             layerE.outerWidth() > config.maxWidth && layerE.width(config.maxWidth);
-            
+
             fowo.tipColor = config.tips.style[1];
             layArea[0] = layerE.outerWidth();
-            
+
             //辨别tips的方位
             fowo.where = [function(){ //上
                 fowo.tipLeft = fowo.left;
                 fowo.tipTop = fowo.top - layArea[1] - 10;
-                tipsG.removeClass('layerTipsB').addClass('layerTipsT').css({'border-right-color': fowo.tipColor});   
+                tipsG.removeClass('layerTipsB').addClass('layerTipsT').css({'border-right-color': fowo.tipColor});
             }, function(){ //右
                 fowo.tipLeft = fowo.left + fowo.width + 10;
                 fowo.tipTop = fowo.top;
-                tipsG.removeClass('layerTipsL').addClass('layerTipsR').css({'border-bottom-color': fowo.tipColor}); 
+                tipsG.removeClass('layerTipsL').addClass('layerTipsR').css({'border-bottom-color': fowo.tipColor});
             }, function(){ //下
                 fowo.tipLeft = fowo.left;
                 fowo.tipTop = fowo.top + fowo.height + 10;
@@ -399,7 +399,7 @@ Class.pt.set = function(times){
                 tipsG.removeClass('layerTipsR').addClass('layerTipsL').css({'border-bottom-color': fowo.tipColor});
             }];
             fowo.where[config.tips.guide]();
-            
+
             /* 8*2为小三角形占据的空间 */
             if(config.tips.guide === 0){
                 fowo.top - (win.scrollTop() + layArea[1] + 8*2) < 0 && fowo.where[2]();
@@ -412,30 +412,30 @@ Class.pt.set = function(times){
             }
             layerE.css({left: fowo.tipLeft, top: fowo.tipTop});
         break;
-        
+
         default:
             that.layerMian.css({'background-color': '#fff'});
             if(config.title[1]){
                 that.layerText.css({paddingTop: 18 + that.layerTitle.outerHeight()});
             }else{
                 layerE.find('.xubox_msgico').css({top: 8});
-                that.layerText.css({marginTop : 11});   
+                that.layerText.css({marginTop : 11});
             }
         break;
     };
-    
+
     config.fadeIn && layerE.css({opacity: 0}).animate({opacity: 1}, config.fadeIn);
     that.move();
 };
 
 //自适应宽高
 Class.pt.autoArea = function(times){
-    
+
     var that = this, layerE = that.layerE, config = that.config, page = config.page,
     layerMian = that.layerMian, layerBtn = that.layerBtn, layerText = that.layerText,
-    layerPage = that.layerPage, layerB = that.layerB, titHeight, outHeight, btnHeight = 0, 
+    layerPage = that.layerPage, layerB = that.layerB, titHeight, outHeight, btnHeight = 0,
     load = $(".xubox_loading");
-    if(config.area[0] === 'auto' && layerMian.outerWidth() >= config.maxWidth){ 
+    if(config.area[0] === 'auto' && layerMian.outerWidth() >= config.maxWidth){
         layerE.css({width : config.maxWidth});
     }
     config.title[1] ? titHeight = that.layerTitle.innerHeight() : titHeight = 0;
@@ -455,7 +455,7 @@ Class.pt.autoArea = function(times){
             }
         break;
         case 3:
-            outHeight = load.outerHeight(); 
+            outHeight = load.outerHeight();
             layerMian.css({width: load.width()});
         break;
     };
@@ -482,11 +482,11 @@ Class.pt.move = function(){
             conf.layerE.css({left: lefts, top: parseInt(conf.move.css('top')) - conf.setY});
         }
     };
-    
+
     config.move[1] && that.layerE.find(config.move[0]).attr('move','ok');
     config.move[1] ? that.layerE.find(config.move[0]).css({cursor: 'move'}) : that.layerE.find(config.move[0]).css({cursor: 'auto'});
-    
-    $(config.move[0]).on('mousedown', function(M){  
+
+    $(config.move[0]).on('mousedown', function(M){
         M.preventDefault();
         if($(this).attr('move') === 'ok'){
             conf.ismove = true;
@@ -497,14 +497,14 @@ Class.pt.move = function(){
             }
             conf.move = $('#xubox_moves');
             config.moveType && conf.move.css({opacity: 0});
-           
+
             conf.moveX = M.pageX - conf.move.position().left;
             conf.moveY = M.pageY - conf.move.position().top;
             conf.layerE.css('position') !== 'fixed' || (conf.setY = win.scrollTop());
         }
     });
-    
-    $(document).mousemove(function(M){          
+
+    $(document).mousemove(function(M){
         if(conf.ismove){
             var offsetX = M.pageX - conf.moveX, offsetY = M.pageY - conf.moveY;
             M.preventDefault();
@@ -512,21 +512,21 @@ Class.pt.move = function(){
             //控制元素不被拖出窗口外
             if(!config.moveOut){
                 conf.setY = win.scrollTop();
-                var setRig = win.width() - conf.move.outerWidth() - config.border[0], setTop = config.border[0] + conf.setY;               
+                var setRig = win.width() - conf.move.outerWidth() - config.border[0], setTop = config.border[0] + conf.setY;
                 offsetX < config.border[0] && (offsetX = config.border[0]);
-                offsetX > setRig && (offsetX = setRig); 
+                offsetX > setRig && (offsetX = setRig);
                 offsetY < setTop && (offsetY = setTop);
                 offsetY > win.height() - conf.move.outerHeight() - config.border[0] + conf.setY && (offsetY = win.height() - conf.move.outerHeight() - config.border[0] + conf.setY);
             }
-            
-            conf.move.css({left: offsetX, top: offsetY});   
+
+            conf.move.css({left: offsetX, top: offsetY});
             config.moveType && conf.moveLayer();
-            
+
             offsetX = null;
             offsetY = null;
             setRig = null;
             setTop = null
-        }                                              
+        }
     }).mouseup(function(){
         try{
             if(conf.ismove){
@@ -567,36 +567,36 @@ Class.pt.callback = function(){
         e.preventDefault();
         config.close(that.index);
     });
-    
+
     layerE.find('.xubox_yes').off('click').on('click',function(e){
         e.preventDefault();
         dialog.yes(that.index);
     });
-    
+
     layerE.find('.xubox_no').off('click').on('click',function(e){
         e.preventDefault();
         dialog.no(that.index);
     });
-    
+
     this.layerS.off('click').on('click', function(e){
         e.preventDefault();
         that.config.shadeClose && layer.close(that.index);
     });
-    
+
     ready.config.end[that.index] = config.end;
 };
 
 Class.pt.IE6 = function(){
     var that = this, layerE = that.layerE, select = $('select'), dom = that.dom;
-    var _ieTop =  layerE.offset().top;  
+    var _ieTop =  layerE.offset().top;
     //ie6的固定与相对定位
     if(that.config.fix){
         var ie6Fix = function(){
             layerE.css({top : $(document).scrollTop() + _ieTop});
-        };  
+        };
     }else{
         var ie6Fix = function(){
-            layerE.css({top : _ieTop}); 
+            layerE.css({top : _ieTop});
         };
     }
     ie6Fix();
@@ -616,11 +616,11 @@ Class.pt.IE6 = function(){
         $.each(select, function(index , value){
             var sthis = $(this);
             if(!sthis.parents('.'+dom.lay)[0]){
-                (sthis.attr('layer') == 1 && $('.'+dom.lay).length < 1) && sthis.removeAttr('layer').show(); 
+                (sthis.attr('layer') == 1 && $('.'+dom.lay).length < 1) && sthis.removeAttr('layer').show();
             }
             sthis = null;
         });
-    }; 
+    };
 };
 
 //给layer对象拓展方法
@@ -634,13 +634,13 @@ Class.pt.openLayer = function(){
 
     //获取layer当前索引
     layer.getIndex = function(selector){
-        return $(selector).parents('.'+dom.lay).attr('times');  
+        return $(selector).parents('.'+dom.lay).attr('times');
     };
 
     //获取子iframe的DOM
     layer.getChildFrame = function(selector, index){
         index = index || $('.'+ dom.ifr).parents('.'+dom.lay).attr('times');
-        return $('#'+ dom.lay + index).find('.'+ dom.ifr).contents().find(selector);    
+        return $('#'+ dom.lay + index).find('.'+ dom.ifr).contents().find(selector);
     };
 
     //得到当前iframe层的索引，子iframe时使用
@@ -700,13 +700,13 @@ Class.pt.openLayer = function(){
             ct: -layerE.outerHeight(),
             cr: ww - cutWth - config.border[0],
             fn: function(){
-                iE6 && that.IE6();  
+                iE6 && that.IE6();
             }
         };
         switch(type){
             case 'left-top':
                 layerE.css({left: anim.cl, top: anim.ct}).animate(anim.t, rate, anim.fn);
-            break; 
+            break;
             case 'top':
                 layerE.css({top: anim.ct}).animate(anim.t, rate, anim.fn);
             break;
@@ -725,8 +725,8 @@ Class.pt.openLayer = function(){
             case 'left':
                 layerE.css({left: -layerE.outerWidth(), marginLeft:0}).animate({left:anim.t.top}, rate, anim.fn);
             break;
-            
-        };  
+
+        };
     };
 
     //初始化拖拽元素
@@ -743,7 +743,7 @@ Class.pt.openLayer = function(){
             nowobect[0].css(options);
             if(nowobect[1][0]){
                 nowobect[1].css({
-                    width: options.width - 2*parseInt(nowobect[1].css('left')), 
+                    width: options.width - 2*parseInt(nowobect[1].css('left')),
                     height: options.height - 2*parseInt(nowobect[1].css('top'))
                 });
             }
@@ -784,9 +784,9 @@ Class.pt.openLayer = function(){
 
 //主入口
 ready.run = function(){
-    $ = jQuery; 
+    $ = jQuery;
     win = $(window);
-    layer.use('mincss/layer_min.css');
+    layer.use('layer.css');
     $.layer = function(deliver){
         var o = new Class(deliver);
         return o.index;
