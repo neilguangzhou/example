@@ -69,12 +69,12 @@
         $("#js_couponError").show();
         gotoStage2(false);
       } else {
-        GLOBAL.PopObj.alert({msg : json.msg});
+        MY.alert({msg : json.msg});
       }
     }).fail(function() {
       $openIt.data("processing", false);
       $openIt.removeClass($openIt.data("animation1"));
-      GLOBAL.PopObj.alert({msg : "Please try again!"});
+      MY.alert({msg : "Please try again!"});
     });
   }
 
@@ -119,5 +119,38 @@
     }
 
     return animation;
+  }
+
+
+  /**
+   * 模拟alert框
+   * @param  {[type]} options.msg         文本 默认没有
+   * @param  {[type]} options.title       标题 默认没有
+   * @param  {[type]} options.shade       遮罩层 默认有
+   * @param  {[type]} options.typeTag     弹出框信息类型0-15,-1不显示
+   * @param  {[type]} options.callBack    确认按钮回调函数
+   * @param  {[type]} options.callBackArg 确认按钮回调函数回调函数的参数
+   * @return {[type]} null        [description]
+   */
+  var MY = {};
+  MY.alert = function(options) {
+    var defaultOpts = {
+      shade: options.shade ? options.shade : [0.8, '#000', true],
+      area: ['auto', 'auto'],
+      title: options.title ? options.title : jsLg.message,
+      border: [1, 1, '#ddd', true],
+      dialog: {
+        msg: options.msg ? options.msg : "",
+        btns: 1,
+        type: options.typeTag ? options.typeTag : 0,
+        btn: [jsLg.ok],
+        yes: function(index) {
+          options.callBack ? options.callBack(options.callBackArg ? options.callBackArg : "") : "";
+          layer.close(index);
+        }
+      }
+    }
+    //defaultOpts = $.extend(true,defaultOpts,options );
+    return $.layer(defaultOpts);
   }
 })(window, jQuery);
