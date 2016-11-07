@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>转盘游戏</title>
+  <style>
+    html, body, p, h3 {margin: 0; padding: 0;}
+    body {font: 100%/1 Arial, sans-serif;}
+    .close-game:hover {color:#fef69b !important;}
+  </style>
+</head>
+<body>
+  <script src="../lib/jquery-1.12.4.js"></script>
+  <script src="../lib/jQueryRotate.min.js"></script>
+  <script>
+    ({
+        // 入口html
+        enterHTML: '<div style="position:fixed;z-index:400;right:0;bottom:100px;width:57px;height:58px;cursor:pointer;"><img src="images/plate_entry.gif" width="57" height="58"></div>',
+        // 转盘html
+        gameHTML: '<div id="js_gameMask" style="display:none;position:fixed;z-index:401;top:0;bottom:0;left:0;right:0;background-color:#000;opacity:.3;filter:alpha(opacity=30);"></div><div id="js_gameLayer" style="display:none;position:fixed;z-index:402;top:50%;margin-top:-297px;left:50%;margin-left:-297px;width:595px;height:595px;background:url(images/plateouter.png) no-repeat;"><img id="js_rotateEl" src="images/plateinner.png" style="margin-left:20px;margin-top:20px;width:554px;height:554px;"><div style="position:absolute;top:50%;margin-top:-158px;left:50%;margin-left:-103px;width:215px;height:266px;background:url(images/spin.png) no-repeat;font-weight:bold;font-size:12px;text-align:center;"><a id="js_spin" style="display:block;margin:0 auto;margin-top:173px;border:2px solid #8e2730;width:150px;height:26px;line-height:26px;color:#000;background-color:#fef69b;border-radius:3px;text-decoration:none;" href="javascript:;">CLICK HERE TO SPIN</a><a style="display:block;margin:0 auto;margin-top:10px;color:#fef69b;" href="#">CHECK MY COUPON</a><a id="js_closeGame" class="close-game" style="display:block;margin:0 auto;margin-top:6px;color:#62504e;" href="javascript:;">NO,THANKS</a></div></div>',
+        // 奖品html
+        popHTML: '<div id="js_resultMask" style="display:none;position:fixed;z-index:403;top:0;bottom:0;left:0;right:0;background-color:#000;opacity:.3;filter:alpha(opacity=30);"></div><div id="js_result" style="position:fixed;z-index:404;top:50%;margin-top:-183px;left:50%;margin-left:-291px;width:582px;height:365px;text-align:center;line-height:1;color:#333;background:#fff url(images/popbg.jpg) no-repeat;);"><div id="js_resultCnt"></div><a href="#" target="_blank" style="display:inline-block;margin-top:30px;width:206px;height:44px;line-height:44px;font-size:14px;color:#fff;background-color:#be3944;text-decoration:none;">GO SHOPPING NOW ></a><a id="js_closeResult" href="javascript:;"style="position:absolute;top:-10px;right:-10px;width:34px;height:34px;background:url(images/close.png) no-repeat;"></a></div>',
+        coupons: {
+          // 奖品编号: 角度
+          0: 0, // 10%
+          1: 60, // 15%
+          2: 120, // $5
+          3: 180, // 200T
+          4: 240, // 500T
+          5: 300	// 12%
+        },
+        // 初始化，cookie不存在自动弹出
+        init: function() {
+          this.initEnter();
+          this.openGame();
+        },
+        // 初始化入口
+        initEnter: function() {
+          var self = this;
+          $(this.enterHTML).appendTo("body")
+            .on("click", function() {
+              self.openGame();
+            });
+
+          return this;
+        },
+        // 打开转盘游戏
+        openGame: function() {
+          var self = this;
+          if (!this.gameLayer) {
+            $(this.gameHTML).appendTo("body");
+            this.gameLayer = $("#js_gameLayer");
+            this.gameMask = $("#js_gameMask");
+            this.rotateEl = $("#js_rotateEl");
+
+            $("#js_gameMask, #js_closeGame").on("click", function() {
+              self.gameLayer.hide();
+              self.gameMask.hide();
+            });
+
+            $("#js_spin").on("click", function() {
+              if (self.isProcessing !== true) {
+                self.isProcessing = true;
+                self.requireCoupon();
+              }
+            });
+          }
+
+          this.gameLayer.show();
+          this.gameMask.show();
+
+          return this;
+        },
+        // 发请求，抽奖
+        requireCoupon: function() {
+
+          var timestamp=new Date().getTime();
+
+          var self = this;
+          $.ajax({
+            url: "data/data.json?t="+timestamp,
+            type: "GET",
+            dataType: "json"
+          }).done(function(json) {
+            self.isProcessing = false;
+            if (json.status == 1) {
+              if (/MSIE 6|MSIE 7|MSIE 8/.test(navigator.userAgent)) {
+                self.openResultWin(json);
+              } else {
+                self.rotateFunc(json);
+              }
+            } else if (json.status == 2) {
+              self.openResultWin(json);
+            } else {
+              alert({msg: json.msg});
+            }
+          }).fail(function() {
+            self.isProcessing = false;
+            alert({msg: "please try again"});
+          });
+        },
+        // 转动转盘到对应奖品
+        rotateFunc: function(json) {
+          var self = this;
+          this.rotateEl.rotate({
+            angle: 0,
+            duration: 5000,
+            animateTo: this.coupons[json.type] + 1440,
+            callback: function(){
+              self.openResultWin(json);
+            }
+          });
+        },
+        // 打开奖品窗口
+        openResultWin: function(json) {
+          var self = this;
+          if (!this.resultWin) {
+            $(this.popHTML).appendTo("body");
+            this.resultMask = $("#js_resultMask");
+            this.resultWin = $("#js_result");
+            this.resultCnt = $("#js_resultCnt");
+
+            $("#js_closeResult").on("click", function() {
+              self.resultWin.hide();
+              self.resultMask.hide();
+            });
+          }
+
+          this.resultCnt.html(this.getResultHTML(json));
+
+          this.resultWin.show();
+          this.resultMask.show();
+        },
+        // 拼接奖品html
+        getResultHTML: function (json) {
+          var html = "";
+          if (json.status === 1) {
+            html += '<h3 style="padding-top:60px;font-size:40px;">CONGRATULATIONS!</h3>';
+            if (json.desc) {
+              html += '<p style="padding-top:25px;font-size:30px;">' + json.desc + '</p>';
+            }
+            if (json.coupon) {
+              if (json.type === 3 || json.type === 4) {
+                html += '<p style="padding-top:30px;font-size:50px;color:#be3944;">' + json.coupon + '</p>';
+              } else {
+                html += '<p style="padding-top:10px;font-size:50px;color:#be3944;">' + json.coupon + '</p>';
+              }
+            }
+            if (json.tips) {
+              if (json.type === 3 || json.type === 4) {
+                html += '<p style="padding-top:25px;font-size:20px;">' + json.tips + '</p>';
+              } else {
+                html += '<p style="padding-top:10px;font-size:16px;">' + json.tips + '</p>';
+              }
+            }
+          } else if (json.status == 2) {
+            html = '<h3 style="padding-top:95px;font-size:40px;">SORRY</h3><p style="padding-top:10px;font-size:20px;line-height:30px;">You Have Already Used Your Chance Today!<br>Please Come Back Tomorrow!</p>';
+          }
+
+          return html;
+        }
+      }).init();
+  </script>
+</body>
+</html>

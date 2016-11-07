@@ -1,0 +1,16 @@
+{"status": 1, "type": 0, "desc": "10% OFF COUPON", "coupon": "EASTER10", "tips": "(Expires in : Mar. 31, 2016)"}
+{"status": 1, "type": 1, "desc": "15% OFF COUPON", "coupon": "EASTER15", "tips": "(Expires in : Mar. 31, 2016)"}
+{"status": 1, "type": 2, "desc": "$5 CASH COUPON", "coupon": "EASTER5", "tips": "(Cash Coupon Can Be Used Once Only)"}
+{"status": 1, "type": 3, "coupon": "200 T-POINTS", "tips": "The T-Points have been sent to your account."}
+{"status": 1, "type": 4, "coupon": "500 T-POINTS", "tips": "The T-Points have been sent to your account."}
+{"status": 1, "type": 5, "desc": "12% OFF COUPON", "coupon": "EASTE12", "tips": "(Expires in : Mar. 31, 2016)"}
+{"status": 2}
+{"status": 0, "msg": "error msg"}
+
+status: 0---失败，1---成功, 2---重复领取
+type: 奖品类型 0, 1, 2, 3, 4, 5
+desc: 奖品描述
+coupon: 奖品内容
+tips: 奖品提示信息
+msg: 错误信息
+
