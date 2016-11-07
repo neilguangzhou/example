@@ -9,43 +9,119 @@
   <style>
     html, body, dl, dd, dt, p, ul {margin: 0; padding: 0;}
     body {font: 100%/1.5 Arial, sans-serif; color: #333; background-color: #e5e5e5;}
+    h1 {font-size: 2em; margin-top: 0.67em; margin-bottom: 0.67em; font-weight: bold;}
+    h3 {font-size: 1.17em; margin-top: 1em; margin-bottom: 1em; font-weight: bold;}
+    p {padding-bottom: 1em;}
     ul {list-style: none;}
     a {color: inherit;}
     a:hover {color: #008080;}
     .cf {*zoom: 1;}
     .cf:after {content: " "; display: table; clear: both;}
     .pr {position: relative;}
-    .motto {font-size: 200%; font-weight: bold; font-family: monospace; color: #008080;}
-    .content {padding: 30px 0 80px; width: 1000px; margin: 0 auto;}
-    .result {float: left; width: 40%;}
+    .motto {font-size: 150%; font-weight: bold; font-family: monospace; color: #008080;}
+    .content {padding: 30px 10px 80px 10px; min-width: 320px; max-width: 1000px; margin: 0 auto;}
+    @media screen and (max-width: 1000px) {
+      /*.content {width: 600px;}*/
+    }
+
+    .result {float: left; max-width: 350px;}
+    @media screen and (min-width: 1000px) {
+      .result {padding-left: 50px;}
+    }
     .result > dl {padding-left: 20px; padding-bottom: 20px;}
     .result dt {position: relative;}
     .result dt:before {content: ''; display: inline-block; position: absolute; top: 10px; left: -20px; width: 6px; height: 6px; border-radius: 100%; background-color: #008080;}
 
 
-    .about-me {float: left; width: 60%;}
+    .about-me {float: left; max-width: 600px;}
     .about-me > dl > dt {margin: 20px 0 ; color: #008080; font-size: 18px; font-weight: bold; border-bottom: 1px solid #008080;}
     .about-me > dl > dd {padding-left: 30px;}
-    .basic-info td:first-child {width: 260px;}
     .sr2em {padding-right: 2em;}
-    table {border-collapse: collapse; border-spacing: 0;}
+    .sl1em {padding-left: 1em;}
+    .skill {padding-bottom: 1em;}
     .skill dt, .skill dd {float: left;}
     .skill__cnt {max-width: 450px;}
     .skill__cnt > li {position: relative; padding-left: 12px; }
     .skill__cnt > li:before {content: ''; display: inline-block; position: absolute; top: 10px; left: 0; width: 6px; height: 6px; border-radius: 100%; background-color: #008080;}
     .work-list {margin-top: 50px;}
     .work {padding-left: 30px; border-left: 1px solid #008080;}
-    .role {margin-left: 30px; font-size: 80%; font-weight: normal;}
+    .role {display: inline-block; font-size: 80%; font-weight: normal;}
     .year {position: absolute; top: -15px; left: -58px; box-sizing: border-box; padding-top: 8px; width: 50px; height: 50px; border: 1px solid #008080; border-radius: 100%; background-color: #e5e5e5; font-size: 14px; line-height: 16px; text-align: center;}
+    .company {margin-right: 20px;}
     .highlight {color: #008080;}
   </style>
 </head>
 <body>
   <div class="content cf">
     <div class="motto">
-<pre>while (if-you-are-alive) {
-  If at first you don't succeed, try, try again!
-}</pre>
+      <div>while (if-you-are-alive) {</div>
+      <div class="sl1em">If at first you don't succeed, try, try again!</div>
+      <div>}</div>
+    </div>
+    <div class="about-me">
+      <h1>关于我</h1>
+      <p class="highlight"><a href="mailto:cnluoxh@163.com">我目前正在找工作中，期望工作地点：深圳<br>如果你有好的介绍，请点击这里给我发邮件吧，Thanks!</a></p>
+      <dl>
+        <dt>基本信息</dt>
+        <dd>
+          <ul>
+            <li><span class="sr2em">姓</span>名：十天（网名）</li>
+            <li><span class="sr2em">性</span>别：男</li>
+            <li>工作角色：web前端开发</li>
+          </ul>
+          <ul>
+            <li><span class="sr2em">学</span>历：本科（广东工业大学）</li>
+            <li>工作年限：5年以上</li>
+            <li>电子邮件：<a href="mailto:cnluoxh@163.com">cnluoxh@163.com</a></li>
+          </ul>
+        </dd>
+        <dt>简介</dt>
+        <dd>
+          <p>热爱前端，喜欢技术。</p>
+          <p>从事软件开发多年，拥有丰富的前端开发经验；熟悉web标准，掌握多种前端技术，对语义化，兼容性有比较好的理解；精通web网站开发，有完整成功的案例，曾独立负责并完成了pc端和mobile端网站的整站开发；对于前端自动化，工程化，有一定的实践经验。</p>
+          <p>工作中主动发现学习新技术，善于与产品、运营、设计师沟通，虚心听取意见以及提出合理建议，与同事共同进步成长。</p>
+        </dd>
+        <dt>个人技能</dt>
+        <dd>
+          <dl class="skill cf">
+            <dt><span class="sr2em">语</span>言：</dt>
+            <dd>CET-6，具备英语材料的阅读理解能力；</dd>
+          </dl>
+          <dl class="skill cf">
+            <dt>专业技能：</dt>
+            <dd>
+              <ul class="skill__cnt">
+                <li>熟悉html、css(less/scss)、javascript(jquery)，能够编写结构合理的html，高度还原设计稿，实现交互性和逻辑性复杂的功能，并且对页面做出合理优化；</li>
+                <li>熟悉requirejs，具备javascript面向对象和模块化开发的能力；</li>
+                <li>熟悉gulp，webpack，能够实现前端开发自动化；</li>
+                <li>掌握bootstrap，能够使用bootstrap快速开发简单的页面；</li>
+                <li>掌握vuejs，vuex以及其他vue生态圈的组件，有实际使用经验；</li>
+                <li>掌握svn（git）代码管理工具的使用；</li>
+                <li>了解nodejs，express和koa，有过简单使用经验；</li>
+                <li>了解java，有过ssh使用经验；</li>
+              </ul>
+            </dd>
+          </dl>
+        </dd>
+        <dt>工作经历</dt>
+        <dd class="work-list">
+          <div class="work">
+            <h3 class="pr"><span class="year">2015<br>2016</span><span class="company">深圳市环球易购电子商务有限公司</span><span class="role">前端工程师</span></h3>
+            <p>上市公司 | 跨境B2C电商平台 | 2000人以上</p>
+            <p>参与10多个电商网站平台的开发以及维护，包括twinkledeals, sammydress, nastydress , dresslily, , gearbest, digbest，五洲会海购（每个网站都有pc端和手机端）。</p>
+          </div>
+          <div class="work">
+            <h3 class="pr"><span class="year">2012<br>2014</span><span class="company">从兴技术有限公司</span><span class="role">软件工程师</span></h3>
+            <p>合资企业 | 电信业务 | 2000人以上</p>
+            <p>参与小组项目开发框架的比较、筛选，功能开发维护，需求以及原型讨论。参与项目有ETL管理平台，bmETL采集子系统，IDC流量计费网关系统，广东移动收入保障系统。</p>
+          </div>
+          <div class="work">
+            <h3 class="pr"><span class="year">2010<br>2012</span><span class="company">广州石竹软件有限公司</span><span class="role">软件工程师</span></h3>
+            <p>独资企业 | 数据治理 | 200人以上</p>
+            <p>根据产品、项目的具体需求，选择合适的前端技术，快速实现系统界面开发，并对系统进行功能测试、技术支持以及bug修复。参与产品和项目有datamatrix数据交换平台，广东地税统一数据平台（udi），广东移动管理数据中心（mdc）</p>
+          </div>
+        </dd>
+      </dl>
     </div>
     <div class="result">
       <h1>个人项目</h1>
@@ -53,7 +129,7 @@
         <dt>电商，用到vue,webpack,flexible等</dt>
         <dd><a href="http://shop.luoxiaohui.com/home">手机站</a></dd>
       </dl>
-      <h1>参与过的网站</h1>
+      <h1>参与过开发维护的网站</h1>
       <dl>
         <dt>twinkledeals（日均pv 200万，日均ip 30万）</dt>
         <dd><a href="http://www.twinkledeals.com/">pc版</a></dd>
@@ -89,87 +165,25 @@
       </dl>
       <h1>做过的页面备忘</h1>
       <dl>
-        <dt>黑色星期五活动动画</dt>
-        <dd><a href="http://blog.luoxiaohui.com/example/blackfriday/web/blackfriday.html">pc版</a></dd>
-        <dd><a href="http://blog.luoxiaohui.com/example/blackfriday/mobile/blackfriday.html">手机版</a></dd>
-      </dl>
-      <dl>
-        <dt>圣诞节活动动画</dt>
-        <dd><a href="http://blog.luoxiaohui.com/example/christmas/christmas.html">pc版</a></dd>
+        <dt>万圣节活动动画</dt>
+        <dd><a href="http://blog.luoxiaohui.com/example/halloween/halloween.html">pc版</a></dd>
       </dl>
       <dl>
         <dt>复活节活动动画</dt>
         <dd><a href="http://blog.luoxiaohui.com/example/easter/easter.html">pc版</a></dd>
       </dl>
       <dl>
-        <dt>万圣节活动动画</dt>
-        <dd><a href="http://blog.luoxiaohui.com/example/halloween/halloween.html">pc版</a></dd>
+        <dt>圣诞节活动动画</dt>
+        <dd><a href="http://blog.luoxiaohui.com/example/christmas/christmas.html">pc版</a></dd>
       </dl>
       <dl>
         <dt>复活节转盘游戏</dt>
         <dd><a href="http://blog.luoxiaohui.com/example/rotate/rotate.html">pc版</a></dd>
       </dl>
-    </div>
-    <div class="about-me">
-      <h1>关于我</h1>
-      <p class="highlight"><a href="mailto:cnluoxh@163.com">我目前正在找工作中，期望工作地点：深圳<br>如果你有好的介绍，请点击这里给我发邮件吧，Thanks!</a></p>
       <dl>
-        <dt>基本信息</dt>
-        <dd>
-          <table class="basic-info">
-            <tbody>
-            <tr><td><span class="sr2em">姓</span>名：十天（网名）</td><td><span class="sr2em">学</span>历：本科（广东工业大学）</td></tr>
-            <tr><td><span class="sr2em">性</span>别：男</td><td>工作年限：5年以上</td></tr>
-            <tr><td>工作角色：web前端开发</td><td>电子邮件：<a href="mailto:cnluoxh@163.com">cnluoxh@163.com</a></td></tr>
-            </tbody>
-          </table>
-        </dd>
-        <dt>简介</dt>
-        <dd>
-          <p>热爱前端，喜欢技术；</p>
-          <p>从事软件开发多年，拥有丰富的前端开发经验；熟悉web标准，掌握多种前端技术，对语义化，兼容性有比较好的理解；精通web网站开发，有完整成功的案例，曾独立负责并完成了pc端和mobile端网站的整站开发；对于前端自动化，工程化，有一定的实践经验。</p>
-          <p>工作中主动发现学习新技术，善于与产品、运营、设计师沟通，虚心听取意见以及提出合理建议，与同事共同进步成长。</p>
-          <p>目前正极力探索总结自己所学知识如何在工作中运用。</p>
-        </dd>
-        <dt>个人技能</dt>
-        <dd>
-          <dl class="skill cf">
-            <dt><span class="sr2em">语</span>言：</dt>
-            <dd>CET-6，具备英语材料的阅读理解能力；</dd>
-          </dl>
-          <dl class="skill cf">
-            <dt>专业技能：</dt>
-            <dd>
-              <ul class="skill__cnt">
-                <li>熟悉html、css(less/scss)、javascript(jquery)，能够编写结构合理的html，高度还原设计稿，实现交互性和逻辑性复杂的功能，并且对页面做出合理优化；</li>
-                <li>熟悉requirejs，具备javascript面向对象和模块化开发的能力；</li>
-                <li>熟悉gulp，webpack，能够实现前端开发自动化；</li>
-                <li>掌握bootstrap，能够使用bootstrap快速开发简单的页面；</li>
-                <li>掌握vuejs，vuex以及其他vue生态圈的组件，有实际使用经验；</li>
-                <li>掌握svn（git）代码管理工具的使用；</li>
-                <li>了解nodejs，express和koa，有过简单使用经验；</li>
-              </ul>
-            </dd>
-          </dl>
-        </dd>
-        <dt>工作经历</dt>
-        <dd class="work-list">
-          <div class="work">
-            <h3 class="pr"><span class="year">2015<br>2016</span>深圳市环球易购电子商务有限公司<span class="role">前端工程师</span></h3>
-            <p>上市公司 | 跨境B2C电商平台 | 2000人以上</p>
-            <p>参与10多个电商网站平台的开发以及维护，包括twinkledeals, sammydress, nastydress , dresslily, , gearbest, digbest，五洲会海购（每个网站都有pc端和手机端）。</p>
-          </div>
-          <div class="work">
-            <h3 class="pr"><span class="year">2012<br>2014</span>从兴技术有限公司<span class="role">软件工程师</span></h3>
-            <p>合资企业 | 电信业务 | 2000人以上</p>
-            <p>参与小组项目开发框架的比较、筛选，功能开发维护，需求以及原型讨论。参与项目有ETL管理平台，bmETL采集子系统，IDC流量计费网关系统，广东移动收入保障系统。</p>
-          </div>
-          <div class="work">
-            <h3 class="pr"><span class="year">2010<br>2012</span>广州石竹软件有限公司<span class="role">软件工程师</span></h3>
-            <p>独资企业 | 数据治理 | 200人以上</p>
-            <p>根据产品、项目的具体需求，选择合适的前端技术，快速实现系统界面开发，并对系统进行功能测试、技术支持以及bug修复。参与产品和项目有datamatrix数据交换平台，广东地税统一数据平台（udi），广东移动管理数据中心（mdc）</p>
-          </div>
-        </dd>
+        <dt>黑色星期五活动动画</dt>
+        <dd><a href="http://blog.luoxiaohui.com/example/blackfriday/web/blackfriday.html">pc版</a></dd>
+        <dd><a href="http://blog.luoxiaohui.com/example/blackfriday/mobile/blackfriday.html">手机版</a></dd>
       </dl>
     </div>
   </div>
