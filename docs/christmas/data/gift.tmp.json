@@ -1,0 +1,33 @@
+{
+    "status": 0,
+    "type": 1,
+    "desc": "13% OFF SITEWIDE COUPON:",
+    "value": "ABCDEFG123",
+    "tips": "(Expires on: NOV 8)"
+}
+
+{
+    "status": 0,
+    "type": 2,
+    "desc": "",
+    "value": "500 Z Points!",
+    "tips": "(P.S. 50 S Points = $1)"
+}
+
+
+status:
+    状态  0---成功；  1--重复领取；  其他值---当成错误
+type: coupon类型
+    1---百分比促销码;   2---积分
+desc: coupon描述
+    百分比促销码返回?% OFF SITEWIDE COUPON:
+    积分返回空字符串
+value：coupon内容
+    百分比促销码返回促销码的值，如ABCDEFG123
+    积分返回积分的值，如xxxPoints!
+tips: 积分提示内容
+    百分比促销码返回(Expires on: ?)
+    积分返回(P.S. 50 S Points=$1)
+msg: 错误信息
+    当type不是0和1的时候用到，弹窗提示用户
+
