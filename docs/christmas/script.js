@@ -18,20 +18,20 @@
   canUseAnimate && play($stageOne);
 
   // -------------------- 雪花 {
-  // if(!/MSIE 6|MSIE 7|MSIE 8/.test(navigator.userAgent)){
-  //   snow = new snowFall({maxFlake :100,fallSpeed :1,flakeSize: 6});
-  //   snow.start();
-  //
-  //   if(/MSIE 9|MSIE 10/.test(navigator.userAgent)){
-  //     $(document).click(function(event){
-  //       if(event.target.id == 'snowfall'){
-  //         $('#snowfall').fadeOut(function(){
-  //           snow.stop();
-  //         })
-  //       }
-  //     })
-  //   }
-  // }
+  if(!/MSIE 6|MSIE 7|MSIE 8/.test(navigator.userAgent)){
+    snow = new snowFall({maxFlake :100,fallSpeed :1,flakeSize: 6});
+    snow.start();
+
+    if(/MSIE 9|MSIE 10/.test(navigator.userAgent)){
+      $(document).click(function(event){
+        if(event.target.id == 'snowfall'){
+          $('#snowfall').fadeOut(function(){
+            snow.stop();
+          })
+        }
+      })
+    }
+  }
 
   // -------------------- 雪花 }
 
@@ -84,7 +84,7 @@
   }
 
   function gotoStage2(needAnimation) {
-    // snow && snow.stop(); // 第二幕不需要雪花
+    snow && snow.stop(); // 第二幕不需要雪花
     $stageTwo.show();
     if (canUseAnimate) {
       !needAnimation && $("#js_couponContent").parent().removeClass("has-animation");
